@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import projectsService from './services/projects'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [projects, setProjects] = useState()
+	
+	useEffect(()=>{
+		projectsService.getAll().then(
+			projects => setProjects(projects)
+		)
+	}, [])
+
+	console.log(projects)
+	return (
+		<div>
+			<h1>hehe</h1>
+		</div>
+	)
 }
 
 export default App;
