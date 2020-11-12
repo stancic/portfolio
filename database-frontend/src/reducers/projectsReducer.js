@@ -4,8 +4,10 @@ const projectsReducer = (state = [], action) => {
 	switch(action.type){
 		case 'INIT_PROJECTS':
 			return action.data
+		case 'ADD_PROJECT':
+			return state.concat(action.data)
 		case 'DELETE_PROJECT':
-			return state.filter(item => item !== state[action.index])
+			return state.filter(item => item.title !== action.data.title)
 		default: return state
 	}
 }
@@ -16,6 +18,16 @@ export const initializeProjects = () => {
 		dispatch({
 			type: 'INIT_PROJECTS',
 			data: projects
+		})
+	}
+}
+
+export const addProject = (project) => {
+	return async dispatch => {
+		const addedProject = await projectsService.addProject(project)
+		dispatch({
+			type: 'ADD_PROJECT',
+			data: addedProject
 		})
 	}
 }
