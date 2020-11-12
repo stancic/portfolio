@@ -1,7 +1,17 @@
 import React from 'react'
 import { Table, Button } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { deleteProject } from '../reducers/projectsReducer'
+
 
 function Projects({ projects }) {
+
+	const dispatch = useDispatch()
+
+	const handleDelete = (project) => {
+		dispatch(deleteProject(project))
+	}
+	
 	return (
 		<Table striped bordered variant="dark">
 				<thead>
@@ -20,7 +30,7 @@ function Projects({ projects }) {
 						<td>{project.git}</td>
 						<td>{project.live_preview}</td>
 						<td><a href={project.img_path} target="blank">{project.img_path}</a></td>
-						<td><Button variant="danger">Remove</Button></td>
+						<td><Button variant="danger" onClick={() => handleDelete(project)}>Remove</Button></td>
 					</tr>
 				)
 				}
