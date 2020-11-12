@@ -13,6 +13,11 @@ const deleteProject = async objectToDelete => {
 	return response.data
 }	
 
+const addProject = async objectToAdd => {
+	let newURL = baseURL + '/addproject'
+	const response = await axios.post(newURL, objectToAdd)
+	return response.data
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getAll, deleteProject }
+export default { getAll, deleteProject, addProject }
