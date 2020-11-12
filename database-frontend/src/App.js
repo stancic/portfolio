@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { initializeProjects } from './reducers/projectsReducer'
 import { useSelector, useDispatch } from 'react-redux'
 import Projects from './components/Projects'
-
+import ProjectsForm from './components/ProjectsForm'
 
 function App() {
 	const dispatch = useDispatch()
@@ -16,7 +16,12 @@ function App() {
 
 	return (
 		<div>
-			<Projects projects={projects}/>
+			<div className="project-table-container">
+				<Projects projects={projects}/>
+			</div>
+			<div className="project-form-container">
+				<ProjectsForm />
+			</div>
 		</div>
 	)
 }
