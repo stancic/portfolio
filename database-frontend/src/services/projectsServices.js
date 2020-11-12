@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'http://localhost:3333/api/projects'
+const baseURL = 'http://localhost:3333/customcms/api/projects/ec98f81637370f86db84cf8448ecf792'
 
 const getAll = () => {
 	const request = axios.get(baseURL)
