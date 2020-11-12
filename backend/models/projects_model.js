@@ -14,6 +14,9 @@ const projectSchema = mongoose.Schema({
 	live_preview: {
 		type: String,
 	},
+	img_path:{
+		type: String
+	},
 	description: {
 		type: String,
 		required: true
