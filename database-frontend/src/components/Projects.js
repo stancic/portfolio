@@ -9,6 +9,7 @@ function Projects({ projects }) {
 						<th>Title</th>
 						<th>Git hub/lab link</th>
 						<th>Live preview link</th>
+						<th>Image link</th>
 						<th>Remove project</th>
 					</tr>
 				</thead>
@@ -18,6 +19,7 @@ function Projects({ projects }) {
 						<td>{project.title}</td>
 						<td>{project.git}</td>
 						<td>{project.live_preview}</td>
+						<td><a href={project.img_path} target="blank">{project.img_path}</a></td>
 						<td><Button variant="danger">Remove</Button></td>
 					</tr>
 				)
