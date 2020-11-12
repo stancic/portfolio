@@ -1,4 +1,4 @@
-import projectsService from '../services/projects'
+import projectsService from '../services/projectsServices'
 
 const projectsReducer = (state = [], action) => {
 	switch(action.type){
