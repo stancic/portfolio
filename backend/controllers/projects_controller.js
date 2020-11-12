@@ -16,7 +16,7 @@ projectsRouter.post('/addproject', async(request, response) => {
 		title: body.title,
 		git: body.git,
 		live_preview: body.live_preview,
-		img_path: body.img_path,
+		img_link: body.img_path,
 		description: body.description
 	})
 

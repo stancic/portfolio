@@ -14,7 +14,7 @@ const projectSchema = mongoose.Schema({
 	live_preview: {
 		type: String,
 	},
-	img_path:{
+	img_link:{
 		type: String
 	},
 	description: {
