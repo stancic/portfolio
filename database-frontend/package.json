@@ -9,6 +9,7 @@
 		"axios": "^0.21.0",
 		"cross-env": "^7.0.2",
 		"lodash": "^4.17.20",
+		"node-sass": "^5.0.0",
 		"nodemon": "^2.0.6",
 		"react": "^17.0.1",
 		"react-bootstrap": "^1.4.0",
@@ -45,5 +46,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"sass": "^1.29.0"
 	}
 }

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import './App.scss'
 import { initializeProjects } from './reducers/projectsReducer'
 import { useSelector, useDispatch } from 'react-redux'
 import Projects from './components/Projects'
@@ -22,12 +23,21 @@ function App() {
 
 	if(user === null){
 		return(
-			<LoginForm />
+			<div className="login-container">
+					<div className="img-and-login-form-container">
+						<div className="img-container">
+							<img src="./img/Logo.png" alt="" className="login-form-image" />
+						</div>
+						<div className="login-form-container">
+							<LoginForm />
+						</div>
+				</div>
+			</div>
 		)
 	}
 	else{
 		return (
-			<div>
+			<div className="form-container">
 				<div className="project-table-container">
 					<Projects projects={projects}/>
 				</div>
