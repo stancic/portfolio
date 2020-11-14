@@ -1,3 +1,5 @@
+@import "./rwd_variables.scss";
+
 *{
 	background-color: #343a40;
 }
@@ -12,11 +14,17 @@
 	height: 100%;
 	.img-and-login-form-container{
 		padding: 45px;
-		border: 2px solid #00BFA6;
+		border: 2px solid $tirkizna;
 		border-radius: 15px;
+		width: 40%;
+		height: 60%;
 		.img-container{
 			display: flex;
 			justify-content: center;
+		}
+		.login-form-container{
+			justify-content: center;
+			margin-top: 50px;
 		}
 	}
 	

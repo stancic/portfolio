@@ -1,0 +1,32 @@
+@import "../rwd_variables.scss";
+
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-input-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.label-for-form{
+		color: $tirkizna;
+	}
+}
+
+.form-button-container{
+	display: inline-block;
+	margin-left: 15%;
+	.btn-outline-primary{
+		border-color: $tirkizna;
+		color: $tirkizna;
+		padding: 7px 40px;
+		&:hover{
+			background-color: $tirkizna;
+			color: white;
+		}
+	}
+}
+
+.form-group{
+	width: 70%;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './LoginForm.scss'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
@@ -14,21 +15,24 @@ function LoginForm() {
 	dispatch(login({ username, password }))
 	setUsername('')
 	setPassword('')
-}
-
+	}
 	return (
 		<Router>
 			<Route path="/">
 			<Form onSubmit={handleLogin}>
-				<Form.Group controlId="formUsername">
-					<Form.Label>Username</Form.Label>
-					<Form.Control type="text" placeholder="Enter username" onChange={({target}) => setUsername(target.value)}/>
-				</Form.Group>
-				<Form.Group controlId="formPassword">
-					<Form.Label>Password</Form.Label>
-					<Form.Control type="password" placeholder="Password" onChange={({target}) => setPassword(target.value)}/>
-				</Form.Group>
-					<Button variant="primary" type="submit">Submit</Button>
+				<div className="form-input-container">
+					<Form.Group controlId="formUsername">
+						<Form.Label className="label-for-form">Username</Form.Label>
+						<Form.Control type="text" placeholder="Enter username" onChange={({target}) => setUsername(target.value)} className="form-input"/>
+					</Form.Group>
+					<Form.Group controlId="formPassword">
+						<Form.Label className="label-for-form">Password</Form.Label>
+						<Form.Control type="password" placeholder="Password" onChange={({target}) => setPassword(target.value)} className="form-input"/>
+					</Form.Group>
+				</div>
+				<div className="form-button-container">
+					<Button variant="outline-primary" type="submit">Submit</Button>
+				</div>
 				</Form>
 			</Route>
 		</Router>
