@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { addProject } from '../reducers/projectsReducer'
-import { logout } from '../reducers/loginReducer'
 
 function ProjectsForm() {
 
@@ -31,9 +30,6 @@ function ProjectsForm() {
 		setDescription('')
 	}
 
-	const handleLogout = () => {
-		dispatch(logout())
-	}
 
 	return (
 		<div>
@@ -51,7 +47,6 @@ function ProjectsForm() {
 				<br />
 				<Button type="submit" variant="primary">Add to database</Button>
 			</Form>
-			<Button variant="danger" onClick={() => handleLogout()}>Logout</Button>
 		</div>
 	)
 }
