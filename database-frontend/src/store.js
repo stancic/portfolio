@@ -50,7 +50,5 @@ store.subscribe(throttle(() => {
 	})
 }, 1000))
 
-//Just for the purpose of testing what store's output is
-console.log('store',store.getState())
 
 export default store

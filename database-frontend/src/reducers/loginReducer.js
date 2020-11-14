@@ -1,7 +1,6 @@
 import loginService from '../services/loginServices'
 
 const loginReducer = (state = null, action) => {
-	console.log('ACT:', action.type)
 	switch(action.type){
 		case 'LOGIN':
 			return action.data.user
