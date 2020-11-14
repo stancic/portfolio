@@ -28,7 +28,8 @@ function App() {
 
 	if(user === null){
 		return(
-			<div className="login-container">
+			<div className="login-parent-container">
+				<div className="login-container">
 					<div className="img-and-login-form-container">
 						<div className="img-container">
 							<img src="./img/Logo.png" alt="" className="login-form-image" />
@@ -36,8 +37,10 @@ function App() {
 						<div className="login-form-container">
 							<LoginForm />
 						</div>
-				</div>
+					</div>
+				</div>	
 			</div>
+
 		)
 	}
 	else{

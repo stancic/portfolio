@@ -14,12 +14,11 @@
 }
 
 .form-button-container{
-	display: inline-block;
-	margin-left: 15%;
 	.btn-outline-primary{
 		border-color: $tirkizna;
 		color: $tirkizna;
 		padding: 7px 40px;
+		width: 100%;
 		&:hover{
 			background-color: $tirkizna;
 			color: white;
@@ -28,5 +27,5 @@
 }
 
 .form-group{
-	width: 70%;
+	width: 100%;
 }
