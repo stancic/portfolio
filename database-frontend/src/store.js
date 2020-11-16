@@ -49,6 +49,6 @@ store.subscribe(throttle(() => {
 		user: store.getState().user
 	})
 }, 1000))
-
+console.log(store.getState())
 
 export default store

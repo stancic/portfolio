@@ -2,21 +2,23 @@ import React, { useState } from 'react'
 import './LoginForm.scss'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { login } from '../reducers/loginReducer'
+import { useHistory } from 'react-router-dom'
 
 function LoginForm() {
 	const dispatch = useDispatch()
-
+	const history = useHistory()
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
 	const handleLogin = async (event) => {
 	event.preventDefault()
 	dispatch(login({ username, password }))
+	history.push("/minicms")
 	setUsername('')
 	setPassword('')
 	}
 	return (
+			
 			<Form onSubmit={handleLogin}>
 				<div className="form-input-container">
 					<Form.Group controlId="formUsername">
