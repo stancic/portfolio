@@ -13,7 +13,7 @@ function Projects({ projects }) {
 	
 	return (
 		<div>
-			<Table striped bordered variant="dark">
+			<Table responsive="lg" striped bordered variant="dark">
 				<thead>
 					<tr>
 						<th>Title</th>

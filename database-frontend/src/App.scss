@@ -1,14 +1,12 @@
 @import "./rwd_variables.scss";
 
 *{
-	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
 body, html{
 	background-color: #343a40;
-	position: relative;
 }
 
 .login-parent-container{
@@ -29,39 +27,23 @@ body, html{
 }
 
 .cms-container{
-	display: grid;
-	grid-template-columns: auto auto;
-	height: 100vh;
-	width: 100vw;
-	.left-side-container{
-		background-color: #212529;
-		h4{
-			margin-left: 10px;
-			color: white;
-		}
-		.left-side-image-and-header-container{
+	display: flex;
+	flex-direction: column;
+	.top-container{
+		background-color: #161a1d;
+		border-bottom: 1px solid white;
+		margin-bottom: 50px;
+		padding: 10px 0;
+		position: relative;
+		.top-image-and-header-container{
 			display: flex;
-			flex-direction: row;
-			.left-side-header-container{
-				display: flex;
-				align-items: center;
-				h3{
-					font-family: $roboto;
-					font-weight: 700;
-					color: white;
-					margin: 0;
-					padding: 0;
-				}
+			align-items: center;
+			color: white;
+			.logout-button-container{
+				position: absolute;
+				right: 10px;
 			}
 		}
-		.logout-button-container{
-			margin-left: 10px;
-		}
-	}
-}
-
-@media(max-width: 1024px){
-	.login-container{
-
+		
 	}
 }

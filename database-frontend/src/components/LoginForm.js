@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './LoginForm.scss'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { login } from '../reducers/loginReducer'
 
 function LoginForm() {
@@ -17,8 +17,6 @@ function LoginForm() {
 	setPassword('')
 	}
 	return (
-		<Router>
-			<Route path="/">
 			<Form onSubmit={handleLogin}>
 				<div className="form-input-container">
 					<Form.Group controlId="formUsername">
@@ -31,11 +29,9 @@ function LoginForm() {
 					</Form.Group>
 				</div>
 				<div className="form-button-container">
-					<Button variant="outline-primary" type="submit">Submit</Button>
+					<Button variant="outline-primary" type="submit">Log in</Button>
 				</div>
-				</Form>
-			</Route>
-		</Router>
+			</Form>
 	)
 }
 

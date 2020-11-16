@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import ProjectsForm from './components/ProjectsForm'
 import LoginForm from './components/LoginForm'
 import { Button } from 'react-bootstrap'
+import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom'
 import { logout } from './reducers/loginReducer'
 
 
@@ -40,28 +41,25 @@ function App() {
 					</div>
 				</div>	
 			</div>
-
 		)
 	}
 	else{
 		return (
 			<div className="cms-container">
-				<div className="left-side-container">
-					<div className="left-side-image-and-header-container">
-						<div className="left-side-img-container">
+				<div className="top-container">
+					<div className="top-image-and-header-container">
+						<div className="top-img-container">
 							<img src="./img/Logo.png" alt=""/>
 						</div>
-						<div className="left-side-header-container">
+						<div className="top-header-container">
 							<h3>Mini CMS</h3>
 						</div>
-					</div>
-					<h4>Hello {user.username} what will you do now?</h4>
-					<div className="logout-button-container">
-						<Button variant="danger" onClick={() => handleLogout()}>Logout</Button>
+						<div className="logout-button-container">
+							<Button variant="danger" onClick={() => handleLogout()}>Logout</Button>
+						</div>
 					</div>
 				</div>
-
-				<div className="right-side-container">
+				<div className="bottom-container">
 					<div className="form-container">
 						<div className="project-table-container">
 							<Projects projects={projects}/>
@@ -71,7 +69,7 @@ function App() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 			
 		)
 	}
