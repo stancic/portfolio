@@ -1,0 +1,20 @@
+.icons{
+	color: white;
+	font-size: 2em;
+}
+
+
+.socials-list-container{
+	display: inline-flex;
+	margin-left: 3em;
+	height: 89vh;
+	align-items: center;
+	justify-content: center;
+	ul{
+		list-style: none;
+		padding: 0;
+		li{
+			margin-bottom: 2em;
+		}
+	}
+}

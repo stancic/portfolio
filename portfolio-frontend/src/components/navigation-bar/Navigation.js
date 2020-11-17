@@ -1,8 +1,11 @@
+//IMPORT DEPENDENCIES
 import React from 'react'
+
+//IMPORT STYLES
 import './navigation.scss'
 
 
-function Navigation({home, projects, contact}) {
+function Navigation({projects, contact}) {
 	return (
 		<div>
 			<div className="navigation-title-and-icon-container">
@@ -12,7 +15,6 @@ function Navigation({home, projects, contact}) {
 
 				<div className="navigation-container">
 					<ul className="links">
-						<li>{home}</li>
 						<li>{projects}</li>
 						<li>{contact}</li>
 					</ul>
