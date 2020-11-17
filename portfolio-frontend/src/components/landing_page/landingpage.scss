@@ -31,6 +31,10 @@
 				font-size: 1.1rem;
 				color: $tirkizna;
 				padding: 0.8em 3.3em;
+				&:hover .custom-cursor{
+					width: 100px;
+					height: 100px;
+				}
 			}
 			.download-button{
 				justify-content: end;

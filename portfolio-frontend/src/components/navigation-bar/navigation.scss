@@ -4,6 +4,7 @@
 	align-items: center;
 	margin: 2em 3em 0 3em;
 	.title-container{
+		flex: 1;
 		color: white;
 		text-transform: uppercase;
 		font-size: 0.9em;
@@ -13,16 +14,21 @@
 		}
 	}
 	.navigation-container{
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
 		color: white;
-		margin-left: 5em;
+		margin-right: 7em;
 		.links{
+			font-weight: 300;
 			display: inline;
 			list-style: none;
 			padding: 0;
 			li{
 				display: inline;
-				margin-left: 2em;
+				margin-left: 5em;
 				padding: 2px;
+				letter-spacing: 1px;
 				&:first-child{
 					margin-left: 0;
 				}
