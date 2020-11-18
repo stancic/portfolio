@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 
 //IMPORT STYLES
 import './customcursor.scss'
