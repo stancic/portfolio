@@ -1,7 +1,7 @@
 @import '../../rwd_variables.scss';
 
 .landing-page-data-container{
-	display: flex;
+	display: none;
 	flex-direction: row;
 	margin-left: 6em;
 	margin-right: 3em;
@@ -25,16 +25,22 @@
 		.left-side-buttons-container{
 			padding-top: 0.2em;
 			button{
-				background-color: transparent;
+				position: relative;
+				display: inline-block;
+				background: linear-gradient($tirkizna, $tirkizna);
+				background-size: 0% 0%;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
 				border: 2px solid $tirkizna;
 				border-radius: 4px;
 				font-size: 1.1rem;
 				color: $tirkizna;
 				padding: 0.8em 3.3em;
-				&:hover .custom-cursor{
-					width: 100px;
-					height: 100px;
-				}
+				transition: background-size .5s, color .5s;
+				&:hover{
+					background-size: 100% 100%;
+					color: white;
+				}				
 			}
 			.download-button{
 				justify-content: end;

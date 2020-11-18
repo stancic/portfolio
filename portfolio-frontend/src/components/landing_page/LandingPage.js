@@ -1,9 +1,15 @@
 import React from 'react'
 import './landingpage.scss'
+import { animations } from 'react-animation'
 
 function LandingPage({title, description, contact, download}) {
+	const fadein = {animation: animations.fadeIn}
+	setTimeout(() => {
+		document.querySelector(".landing-page-data-container").style.display = "flex";
+	}, 2700)
+
 	return (
-		<div className="landing-page-data-container">
+		<div className="landing-page-data-container" style={fadein}>
 			<div className="left-side-container">
 				<div className="left-side-title-container">
 					<p className="left-side-title">{title[1]}</p>

@@ -24,6 +24,7 @@ function Loading() {
 		document.querySelector(".loader-container").style.transition = "3s all ease-out";
 	},2500)
 
+
 	return (
 		<div className="loader-container">
 			<svg 

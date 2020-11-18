@@ -7,7 +7,7 @@ import './customcursor.scss'
 function CustomCursor() {
 	const cursorRef = useRef();
 	
-	window.addEventListener('mousemove', (e) => {
+	document.addEventListener('mousemove', (e) => {
 		cursorRef.current.style.top = e.pageY + 'px';
 		cursorRef.current.style.left = e.pageX + 'px';
 	})
