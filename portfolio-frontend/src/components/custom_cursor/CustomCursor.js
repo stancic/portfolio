@@ -5,16 +5,13 @@ import React, { useEffect, useRef } from 'react'
 import './customcursor.scss'
 
 function CustomCursor() {
-	const cursorRef = useRef(null);
+	const cursorRef = useRef();
 	
-	useEffect(() => {
-		document.addEventListener('mousemove', (e) => {
-			const {clientX, clientY} = e;
-			const mouseX = clientX - cursorRef.current.clientWidth / 2;
-			const mouseY = clientY - cursorRef.current.clientHeight / 2;
-			cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
-		})
-	}, [])
+	window.addEventListener('mousemove', (e) => {
+		cursorRef.current.style.top = e.pageY + 'px';
+		cursorRef.current.style.left = e.pageX + 'px';
+	})
+
 	return (
 		<div className="custom-cursor" ref={cursorRef}>
 			

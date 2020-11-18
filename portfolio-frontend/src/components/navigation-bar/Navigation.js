@@ -6,6 +6,15 @@ import './navigation.scss'
 
 
 function Navigation({projects, contact}) {
+	const addStyle = () => {
+		const cursor = document.querySelector('.custom-cursor');
+		cursor.classList.add("grow-cursor")
+	}
+
+	const removeStyle = () => {
+		const cursor = document.querySelector('.custom-cursor');
+		cursor.classList.remove("grow-cursor")
+	}
 	return (
 		<div>
 			<div className="navigation-title-and-icon-container">
@@ -13,10 +22,10 @@ function Navigation({projects, contact}) {
 					<h1>Dino Stančić</h1>
 				</div>
 
-				<div className="navigation-container">
+				<div className="navigation-container" >
 					<ul className="links">
-						<li>{projects}</li>
-						<li>{contact}</li>
+						<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>{projects}</li>
+						<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>{contact}</li>
 					</ul>
 				</div>
 				<div className="icon-container">

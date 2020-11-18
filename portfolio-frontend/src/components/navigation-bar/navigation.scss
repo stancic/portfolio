@@ -19,18 +19,18 @@
 		justify-content: flex-end;
 		color: white;
 		margin-right: 7em;
+		z-index: 2;
 		.links{
 			font-weight: 300;
-			display: inline;
 			list-style: none;
 			padding: 0;
 			li{
 				display: inline;
 				margin-left: 5em;
-				padding: 2px;
+				padding: 10px;
 				letter-spacing: 1px;
-				&:first-child{
-					margin-left: 0;
+				a{
+					display: inline;
 				}
 			}
 		}
@@ -42,7 +42,9 @@
 		left: 0;
 		right: 0;
 		margin: auto auto;
+		z-index: 0;
 		img{
+			z-index: 2;
 			width: 50px;
 			height: 50px;
 		}
