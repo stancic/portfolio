@@ -1,0 +1,44 @@
+.loader-container{
+	z-index: 1000;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: #1e2124;
+	.progress-bar-container{
+		display: flex;
+		border-radius: 50%;
+		width: 400px;
+		height: 400px;
+		justify-content: center;
+		align-items: center;
+	}
+	.circle-progress{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	img{
+		position: absolute;
+	}
+}
+
+.circular-progress{
+	transform: rotate(-90deg);
+	z-index: -1;
+	background-color: transparent;
+}
+.svg-circle{
+	transition: stroke-dashoffset 2s ease-in-out;		
+	background-color: transparent;
+	z-index: -1;
+}
+
+.hide{
+	display: none;
+}

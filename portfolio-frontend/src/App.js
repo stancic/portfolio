@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
 
 //IMPORT COMPONENTS
+import Loading from './components/loading_screen/Loading'
 import Navigation from './components/navigation-bar/Navigation'
 import Socials from './components/socials/Socials'
 import LandingPage from './components/landing_page/LandingPage'
@@ -19,6 +20,7 @@ function App() {
 	return (
 		<Router>
 			<CustomCursor />
+			<Loading />
 			<Navigation {...linksEN}/>
 			<Socials />
 			<LandingPage {...dataEN}/>
