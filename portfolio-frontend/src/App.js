@@ -1,5 +1,5 @@
 //IMPORT DEPENDECIES
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 //IMPORT STYLES
@@ -16,12 +16,13 @@ import Projects from './components/projects_page/Projects'
 import { dataEN } from './components/data_objects/landingPageData'
 
 function App() {
+
 	return (
 		<Router>
 			<CustomCursor />
 			<Loading />
 			<Socials />
-			<LandingPage {...dataEN}/>
+			{/*<LandingPage {...dataEN}/>*/}
 			<Projects />
 		</Router>
 	)

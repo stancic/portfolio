@@ -6,7 +6,7 @@ export const linksENLanding = {
 
 export const linksENProjects = {
 	"title": "my work",
-	"first_link": "<my_projects />",
+	"first_link": "<home />",
 	"second_link": "<contact_me />"
 }
 
@@ -14,7 +14,7 @@ export const linksENProjects = {
 export const linksENContact = {
 	"title": "contact",
 	"first_link": "<my_projects />",
-	"second_link": "<contact_me />"
+	"second_link": "<home/>"
 }
 
 
