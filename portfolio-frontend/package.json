@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
-    "lodash": "^4.17.20",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-animation": "^1.2.2",
