@@ -1,8 +1,13 @@
+//DEPENDENCIES IMPORT
 import React from 'react'
 import './landingpage.scss'
 import { animations } from 'react-animation'
 
+
+//DATA OBJECTS IMPORTING
 import { linksENLanding } from '../data_objects/links'
+
+//COMPONENTS IMPORT
 import Navigation from '../navigation-bar/Navigation'
 
 
