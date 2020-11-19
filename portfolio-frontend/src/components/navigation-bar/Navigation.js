@@ -2,10 +2,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import { loadPage } from '../../reducers/loadingPageReducer'
+import { switchPage } from '../../reducers/pageStatusReducer'
 
 //IMPORT STYLES
 import './navigation.scss'
-import { loadPage } from '../../reducers/loadingPageReducer'
 
 
 function Navigation({title, first_link, second_link}) {
@@ -19,6 +20,11 @@ function Navigation({title, first_link, second_link}) {
 		cursor.classList.remove("grow-cursor")
 	}
 
+	const handleClick = (data) => {
+		dispatch(loadPage())
+		dispatch(switchPage(data.link))
+	} 
+
 	return (
 		<div>
 			<div className="navigation-title-and-icon-container">
@@ -28,13 +34,13 @@ function Navigation({title, first_link, second_link}) {
 
 				<div className="navigation-container" >
 					<ul className="links">
-							<Link to={first_link.link} onClick={() => dispatch(loadPage())} className="link">
+							<Link to={first_link.link} onClick={() => handleClick(first_link)} className="link">
 								<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>
 									{first_link.data}
 								</li>
 							</Link>
 
-							<Link to={second_link.link} onClick={() => dispatch(loadPage())} className="link">
+							<Link to={second_link.link} onClick={() => handleClick(first_link)} className="link">
 								<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>
 									{second_link.data}
 								</li>

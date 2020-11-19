@@ -7,11 +7,11 @@ const pageStatusReducer = (state="/", action) => {
 }
 
 
-export const goHome = (data) => {
+export const switchPage = (link) => {
 	return async dispatch => {
 		dispatch({
 			type: 'SWITCH_PAGE',
-			data: data
+			data: link
 		})
 	}
 }

@@ -12,6 +12,7 @@ import './projects.scss'
 
 function Projects() {
 	let projects = useSelector(state => state.projects)
+	let pageStatus = useSelector(state => state.page)
 
 	const fadein = {animation: animations.fadeIn}
 
@@ -28,7 +29,7 @@ function Projects() {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.remove("grow-cursor")
 	}
-	if(window.location.href.indexOf('my_projects')>-1){
+	if(pageStatus === "/my_projects"){
 		setTimeout(() => {
 			document.querySelector(".projects-page-data-container").style.display = "flex";
 		}, 2800)

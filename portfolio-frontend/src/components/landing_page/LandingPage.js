@@ -2,6 +2,7 @@
 import React from 'react'
 import './landingpage.scss'
 import { animations } from 'react-animation'
+import { useSelector } from 'react-redux'
 
 
 //DATA OBJECTS IMPORTING
@@ -12,9 +13,11 @@ import Navigation from '../navigation-bar/Navigation'
 
 
 function LandingPage({title, description, contact, download}) {
+	let pageStatus = useSelector(state => state.page)
+
 	const fadein = {animation: animations.fadeIn}
 	
-	if(window.location.href.indexOf('/home')>-1){
+	if(pageStatus === "/"){
 		setTimeout(() => {
 			document.querySelector(".landing-page-data-container").style.display = "flex";
 		}, 2700)
