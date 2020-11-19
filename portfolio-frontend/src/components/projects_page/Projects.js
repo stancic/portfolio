@@ -1,6 +1,7 @@
 //IMPORT DEPENDENCIES
 import React from 'react'
 import Navigation from '../navigation-bar/Navigation'
+import { useSelector } from 'react-redux'
 
 //DATA OBJECTS IMPORTING
 import {linksENProjects} from '../data_objects/links'
@@ -9,13 +10,21 @@ import {linksENProjects} from '../data_objects/links'
 import './projects.scss'
 
 function Projects() {
+	
+	let projects = useSelector(state => state.projects)
+	console.log('PROJECTS', projects)
+
 	return (
 		<div>
 			<Navigation {...linksENProjects}/>
 			
 			<div className="projects-page-data-container">
 				<div className="projects-page-data-left">
-					a
+					<ul>
+						{projects.map(project => 
+							<li key={project.id}>{project.title}</li>		
+						)}
+					</ul>
 				</div>
 				<div className="projects-page-data-right">
 					<div className="third-square">
