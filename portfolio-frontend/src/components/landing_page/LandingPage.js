@@ -13,10 +13,12 @@ import Navigation from '../navigation-bar/Navigation'
 
 function LandingPage({title, description, contact, download}) {
 	const fadein = {animation: animations.fadeIn}
-	setTimeout(() => {
-		document.querySelector(".landing-page-data-container").style.display = "flex";
-	}, 2700)
-
+	
+	if(window.location.href.indexOf('/home')>-1){
+		setTimeout(() => {
+			document.querySelector(".landing-page-data-container").style.display = "flex";
+		}, 2700)
+	}
 	return (
 		<div>
 			<Navigation {...linksENLanding}/>

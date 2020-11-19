@@ -5,10 +5,11 @@
 	height: 20px;
 	pointer-events: none;
 	overflow: hidden;
-	transform: translate(-50%, -50%);
 	position: absolute;
 	top: 0;
 	left: 0;
+	transform: translate(-50%, -50%);
+	background-color: white;
 	backdrop-filter: invert(.7);
 	transition: .3s all ease;
 	transition-property: background, transform;
@@ -17,4 +18,7 @@
 
 .grow-cursor{
 	transform: scale(2);
+	opacity: 0.5;
+	-webkit-transform: scale(2);
+	-ms-transform: scale(2);
 }

@@ -1,7 +1,7 @@
 @import '../../rwd_variables.scss';
 
 .projects-page-data-container{
-	display: flex;
+	display: none;
 	flex-direction: row;
 	margin-left: 6em;
 	margin-right: 3em;
@@ -13,21 +13,20 @@
 	font-family: 'Roboto', sans-serif;
 	.projects-page-data-left{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		flex: 1;
 		margin-top: 1em;
 		font-size: 2.4em;
 		margin-left: 1.3em;
-		justify-content: center;
+		justify-content: flex-start;
 		color: rgba(255, 255, 255, 0.507);
 		font-weight: 100;
 		ul{
 			padding: 0;
 			list-style: none;
-			display: inline-block;
+			display: inline;
 			.project{
-				display: inline-block;
-				margin-right: 4em;
+				display: block;
 				margin-bottom: 1.2em;
 				text-transform: lowercase; 
 				transition: .4s all ease-in-out;
@@ -72,9 +71,8 @@
 				top: 5em;
 				left: 4em;
 				z-index: 2;
-				transition: 2s all ease;
-
 				img{
+					transition: 2s all ease;
 					width: 600px;
 					height: 350px;
 				}

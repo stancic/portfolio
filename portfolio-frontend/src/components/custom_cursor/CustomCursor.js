@@ -8,10 +8,9 @@ function CustomCursor() {
 	const cursorRef = useRef();
 	
 	document.addEventListener('mousemove', (e) => {
-		cursorRef.current.style.top = e.pageY + 'px';
-		cursorRef.current.style.left = e.pageX + 'px';
+		cursorRef.current.style.left = e.clientX + 'px';
+		cursorRef.current.style.top = e.clientY + 'px';
 	})
-
 	return (
 		<div className="custom-cursor" ref={cursorRef}>
 			

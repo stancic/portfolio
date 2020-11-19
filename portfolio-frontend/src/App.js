@@ -25,7 +25,7 @@ function App() {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 	return (
-		<Router basename="/">
+		<Router>
 			<CustomCursor />
 			<Socials />
 			<Switch>
