@@ -9,15 +9,84 @@
 	height: 100%;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
 	.projects-page-data-left{
+		display: flex;
+		flex-direction: column;
 		flex: 1;
 		margin-top: 1em;
-		font-size: 3em;
+		font-size: 2.4em;
 		margin-left: 1.3em;
+		justify-content: center;
+		color: rgba(255, 255, 255, 0.507);
+		font-weight: 100;
+		ul{
+			padding: 0;
+			list-style: none;
+			display: inline-block;
+			.project{
+				display: inline-block;
+				margin-right: 4em;
+				margin-bottom: 1.2em;
+				text-transform: lowercase; 
+				transition: .4s all ease-in-out;
+				&:hover, &:focus{
+					color: rgb(255, 255, 255);
+					text-shadow: 0 0 1px #aaa, 0 0 1px #aaa, 0 0 1px #aaa;
+				}
+			}
+		}
 	}
 	.projects-page-data-right{
 		flex: 1;
+		display: flex;
+		flex-direction: column;
 		margin-right: 2em;
 		margin-left: 2em;
+		position: relative;
+		width: 500px;
+		height: 570px;
+		.project-image-gallery{
+			flex: 3;
+			position: relative;
+			display: block;
+			.square{
+				z-index: 0;
+				width: 600px;
+				height: 350px;
+				border: 2px solid $tirkizna;
+				background-color: $background;
+				position: absolute;
+			}
+			.third-square{
+				z-index: 0;
+				top: 1em;
+			}
+			.second-square{
+				top: 3em;
+				left: 2em;
+				z-index: 1;
+			}
+			.first-square{
+				top: 5em;
+				left: 4em;
+				z-index: 2;
+				img{
+					width: 600px;
+					height: 350px;
+				}
+			}
+		}
+		.project-description{
+			flex: 1;
+			display: flex;
+			align-items: flex-start;
+			.description{
+				font-size: 1.2em;
+				color: white;
+				font-weight: 300;
+			}
+		}
 	}
 }
