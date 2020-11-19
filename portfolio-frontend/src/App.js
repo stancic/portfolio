@@ -1,6 +1,6 @@
 //IMPORT DEPENDECIES
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 //IMPORT STYLES
@@ -24,12 +24,18 @@ function App() {
 		dispatch(getProjects())
 	}, [])
 	return (
-		<Router>
+		<Router basename="/">
 			<CustomCursor />
 			<Loading />
 			<Socials />
-			{/*<LandingPage {...dataEN}/>*/}
-			<Projects />
+			<Switch>
+				<Route path="/my_projects">
+					<Projects />
+				</Route>
+				<Route path="/">
+					<LandingPage {...dataEN}/>
+				</Route>
+			</Switch>
 		</Router>
 	)
 }

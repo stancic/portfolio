@@ -1,20 +1,38 @@
 export const linksENLanding = {
 	"title": "Dino Stančić",
-	"first_link": "<my_projects />",
-	"second_link": "<contact_me />"
+	"first_link": {
+		"link": "/my_projects",
+		"data":	"<my_projects />"
+	},
+	"second_link": {
+		"link": "/contact_me",
+		"data":	"<contact_me />"
+	}
 }
 
 export const linksENProjects = {
 	"title": "my work",
-	"first_link": "<home />",
-	"second_link": "<contact_me />"
+	"first_link": {
+		"link": "/",
+		"data":	"<home />"
+	},
+	"second_link": {
+		"link": "/contact_me",
+		"data":	"<contact_me />"
+	}
 }
 
 
 export const linksENContact = {
 	"title": "contact",
-	"first_link": "<my_projects />",
-	"second_link": "<home/>"
+	"first_link": {
+		"link": "/my_projects",
+		"data":	"<my_projects />"
+	},
+	"second_link": {
+		"link": "/",
+		"data":	"<home />"
+	}
 }
 
 
