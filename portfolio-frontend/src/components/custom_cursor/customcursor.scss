@@ -10,7 +10,6 @@
 	left: 0;
 	transform: translate(-50%, -50%);
 	background-color: white;
-	backdrop-filter: invert(.7);
 	transition: .3s all ease;
 	transition-property: background, transform;
 }
