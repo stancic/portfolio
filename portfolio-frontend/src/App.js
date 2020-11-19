@@ -1,6 +1,7 @@
 //IMPORT DEPENDECIES
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 //IMPORT STYLES
 import './App.scss'
@@ -11,12 +12,17 @@ import Socials from './components/socials/Socials'
 import LandingPage from './components/landing_page/LandingPage'
 import CustomCursor from './components/custom_cursor/CustomCursor'
 import Projects from './components/projects_page/Projects'
+import { getProjects } from './reducers/projectsReducer'
+
 
 //DATA OBJECTS IMPORTING
 import { dataEN } from './components/data_objects/landingPageData'
 
 function App() {
-
+	const dispatch = useDispatch()
+	useEffect(() => {
+		dispatch(getProjects())
+	}, [dispatch])
 	return (
 		<Router>
 			<CustomCursor />
