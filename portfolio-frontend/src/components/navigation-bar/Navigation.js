@@ -5,7 +5,7 @@ import React from 'react'
 import './navigation.scss'
 
 
-function Navigation({header, projects, contact}) {
+function Navigation({title, first_link, second_link}) {
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.add("grow-cursor")
@@ -18,16 +18,16 @@ function Navigation({header, projects, contact}) {
 		<div>
 			<div className="navigation-title-and-icon-container">
 					<div className="title-container">
-						<h1>{header}</h1>
+						<h1>{title}</h1>
 					</div>
 
 				<div className="navigation-container" >
 					<ul className="links">
 						<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>
-								<a href="#">{projects}</a>
+								<a href="#">{first_link}</a>
 						</li>
 						<li className="list-link-item" onMouseEnter={addStyle} onMouseLeave={removeStyle}>
-							<a href="#">{contact}</a>
+							<a href="#">{second_link}</a>
 						</li>
 					</ul>
 				</div>

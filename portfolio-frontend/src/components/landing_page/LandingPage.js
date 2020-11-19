@@ -2,20 +2,19 @@ import React from 'react'
 import './landingpage.scss'
 import { animations } from 'react-animation'
 
-import { linksEN, linksHR } from '../data_objects/links'
+import { linksENLanding } from '../data_objects/links'
 import Navigation from '../navigation-bar/Navigation'
 
 
 function LandingPage({title, description, contact, download}) {
 	const fadein = {animation: animations.fadeIn}
-	let header = "Dino Stančić"
 	setTimeout(() => {
 		document.querySelector(".landing-page-data-container").style.display = "flex";
 	}, 2700)
 
 	return (
 		<div>
-			<Navigation header={header} {...linksEN}/>
+			<Navigation {...linksENLanding}/>
 			<div className="landing-page-data-container" style={fadein}>
 				<div className="left-side-container">
 					<div className="left-side-title-container">

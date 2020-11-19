@@ -1,8 +1,23 @@
-export const linksEN = {
-	"home": "<home />",
-	"projects": "<my_projects />",
-	"contact": "<contact_me />"
+export const linksENLanding = {
+	"title": "Dino Stančić",
+	"first_link": "<my_projects />",
+	"second_link": "<contact_me />"
 }
+
+export const linksENProjects = {
+	"title": "my work",
+	"first_link": "<my_projects />",
+	"second_link": "<contact_me />"
+}
+
+
+export const linksENContact = {
+	"title": "contact",
+	"first_link": "<my_projects />",
+	"second_link": "<contact_me />"
+}
+
+
 
 export const linksHR = {
 	"home": "<početna />",
