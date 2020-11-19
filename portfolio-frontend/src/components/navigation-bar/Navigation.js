@@ -5,7 +5,7 @@ import React from 'react'
 import './navigation.scss'
 
 
-function Navigation({projects, contact}) {
+function Navigation({header, projects, contact}) {
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.add("grow-cursor")
@@ -18,7 +18,7 @@ function Navigation({projects, contact}) {
 		<div>
 			<div className="navigation-title-and-icon-container">
 					<div className="title-container">
-						<h1>Dino Stančić</h1>
+						<h1>{header}</h1>
 					</div>
 
 				<div className="navigation-container" >
