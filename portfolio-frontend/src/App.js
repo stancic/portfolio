@@ -22,17 +22,19 @@ function App() {
 	const dispatch = useDispatch()
 	useEffect(() => {
 		dispatch(getProjects())
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 	return (
 		<Router basename="/">
 			<CustomCursor />
-			<Loading />
 			<Socials />
 			<Switch>
 				<Route path="/my_projects">
+					<Loading />
 					<Projects />
 				</Route>
 				<Route path="/">
+					<Loading />
 					<LandingPage {...dataEN}/>
 				</Route>
 			</Switch>
