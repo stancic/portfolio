@@ -17,6 +17,7 @@ import { getProjects } from './reducers/projectsReducer'
 
 //DATA OBJECTS IMPORTING
 import { dataEN } from './components/data_objects/landingPageData'
+import Contact from './components/contact_page/Contact'
 
 function App() {
 	const dispatch = useDispatch()
@@ -33,6 +34,10 @@ function App() {
 					<Route path="/my_projects">
 						<Loading />
 						<Projects />
+					</Route>
+					<Route path="/contact_me">
+						<Loading />
+						<Contact />
 					</Route>
 					<Route path="/">
 						<Loading />
