@@ -6,16 +6,15 @@
 	margin-left: 6em;
 	margin-right: 3em;
 	margin-top: 3em;
-	height: 100%;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 	font-family: 'Roboto', sans-serif;
+	width: 90vw;
+	transition: .4s all ease-in-out;
 	.projects-page-data-left{
 		display: flex;
 		flex-direction: row;
 		flex: 1;
-		margin-top: 1em;
 		font-size: 2.4em;
 		margin-left: 1.3em;
 		justify-content: flex-start;

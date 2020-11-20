@@ -13,7 +13,7 @@ import './projects.scss'
 function Projects() {
 	let projects = useSelector(state => state.projects)
 	let pageStatus = useSelector(state => state.page)
-
+	let timeout
 	const fadein = {animation: animations.fadeIn}
 
 	const [pictureURL, setPictureURL] = useState("https://i.imgur.com/DclRzsb.png")
@@ -30,9 +30,9 @@ function Projects() {
 		cursor.classList.remove("grow-cursor")
 	}
 	if(pageStatus === "/my_projects"){
-		setTimeout(() => {
+		timeout = setTimeout(() => {
 			document.querySelector(".projects-page-data-container").style.display = "flex";
-		}, 2800)
+		}, 2700)
 	}
 	return (
 		<div>

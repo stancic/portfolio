@@ -26,18 +26,20 @@ function App() {
 	}, [])
 	return (
 		<Router>
-			<CustomCursor />
-			<Socials />
-			<Switch>
-				<Route path="/my_projects">
-					<Loading />
-					<Projects />
-				</Route>
-				<Route path="/">
-					<Loading />
-					<LandingPage {...dataEN}/>
-				</Route>
-			</Switch>
+			<div className="container-for-all">
+				<CustomCursor />
+				<Socials />
+				<Switch>
+					<Route path="/my_projects">
+						<Loading />
+						<Projects />
+					</Route>
+					<Route path="/">
+						<Loading />
+						<LandingPage {...dataEN}/>
+					</Route>
+				</Switch>
+			</div>
 		</Router>
 	)
 }

@@ -14,11 +14,12 @@ import Navigation from '../navigation-bar/Navigation'
 
 function LandingPage({title, description, contact, download}) {
 	let pageStatus = useSelector(state => state.page)
+	let timeout
 
 	const fadein = {animation: animations.fadeIn}
 	
 	if(pageStatus === "/"){
-		setTimeout(() => {
+		timeout = setTimeout(() => {
 			document.querySelector(".landing-page-data-container").style.display = "flex";
 		}, 2700)
 	}
