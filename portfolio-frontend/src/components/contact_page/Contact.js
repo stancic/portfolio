@@ -3,6 +3,8 @@ import React from 'react'
 
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
+import ContactForm from './ContactForm'
+
 
 //IMPORT STYLES
 import './contact.scss'
@@ -15,11 +17,35 @@ function Contact() {
 		<div>
 			<Navigation {...linksENContact} />
 			<div className="contact-content-container">
-				<div className="contact-content-left-container">
-					a
+				<div className="left-title-and-contact-container">
+
+					<div className="left-title-container">
+						<div className="stroked-title-container">
+							<h1 className="stroked-title title-size">Let's talk.</h1>
+						</div>
+						<div className="normal-title-container">
+							<h1 className="normal-title title-size">Let's talk.</h1>
+						</div>
+					</div>
+					<div className="left-contact-container">
+						<p className="mail-container">
+							dinostancic7@gmail.com
+						</p>
+						<p className="location-container">
+							based in Kutina
+						</p>
+					</div>
 				</div>
-				<div className="contact-content-right-container">
-					b
+				<div className="right-form-and-message-container">
+					<div className="right-message-container">
+						<p className="message">
+							If you want me to work on any of your ideas or pojects,
+							or you just want to talk, send me a message.
+						</p>
+					</div>
+					<div className="right-form-container">
+							<ContactForm />
+					</div>
 				</div>
 			</div>
 		</div>
