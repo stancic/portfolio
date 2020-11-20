@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 
-/**
- * 
- * &lt; /&gt;
- */
 
 function ContactForm() {
 
