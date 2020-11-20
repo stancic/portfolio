@@ -30,7 +30,7 @@ function App() {
 	if(user === null){
 		return(
 			<Router>
-					<Route path="/login">
+					<Route path="/">
 						<div className="login-parent-container">
 							<div className="login-container">
 								<div className="img-and-login-form-container">
