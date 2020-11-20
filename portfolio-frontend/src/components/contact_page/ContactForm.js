@@ -1,5 +1,8 @@
+//IMPORT DEPENDENCIES
 import React, { useState } from 'react'
 
+//IMPORT STYLES
+import './contactForm.scss'
 
 function ContactForm() {
 
@@ -11,7 +14,7 @@ function ContactForm() {
 	return (
 		<div>
 			<form>
-				<div className="name-and-mai-container">
+				<div className="name-and-mail-container">
 					<div className="name-container">
 						&lt;name /&gt;
 						<div className="name-input">
@@ -36,7 +39,7 @@ function ContactForm() {
 				<div className="message-container">
 					&lt;message /&gt;
 					<div className="subject-input">
-						<textarea cols="30" rows="10" onnChange={({target}) => setSubject(target.value)}></textarea>
+						<textarea cols="30" rows="10" onChange={({target}) => setSubject(target.value)}></textarea>
 					</div>
 				</div>
 

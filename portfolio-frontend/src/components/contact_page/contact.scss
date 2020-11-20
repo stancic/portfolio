@@ -13,24 +13,22 @@
 		flex: 1;
 		position: relative;
 		.left-title-container{
+			position: relative;
 			.title-size{
-				font-size: 12em;
+				font-size: 10em;
 				font-weight: 600;
-				position: fixed;
-				margin-bottom: 2em;
+				display: inline;
 			}
 			.stroked-title{
-				color: $background;
-				text-shadow: -2px -2px 0 $tirkizna, 2px -2px 0 $tirkizna, -2px 2px 0 $tirkizna, 2px 2px 0 $tirkizna;
-				top: 15%;
-				z-index: 1;
+				
+				color: white;
+				position: absolute;
+				bottom: -1em;
+				left: 0.5em;
 			}
 			.normal-title{
-				top: 18%;
-				left: 7%;
-				display: inline;
-				color: white;
-				z-index: 3;
+				color: $background;
+				text-shadow: -2px -2px 0 $tirkizna, 2px -2px 0 $tirkizna, -2px 2px 0 $tirkizna, 2px 2px 0 $tirkizna;
 			}
 		}
 		.left-contact-container{

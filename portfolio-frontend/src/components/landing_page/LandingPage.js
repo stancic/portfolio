@@ -10,23 +10,16 @@ import { linksENLanding } from '../data_objects/links'
 
 //COMPONENTS IMPORT
 import Navigation from '../navigation-bar/Navigation'
+import { Link } from 'react-router-dom'
 
 
 function LandingPage({title, description, contact, download}) {
 	let pageStatus = useSelector(state => state.page)
-	let timeout
 
-	const fadein = {animation: animations.fadeIn}
-	
-	if(pageStatus === "/"){
-		timeout = setTimeout(() => {
-			document.querySelector(".landing-page-data-container").style.display = "flex";
-		}, 2700)
-	}
 	return (
 		<div>
 			<Navigation {...linksENLanding}/>
-			<div className="landing-page-data-container" style={fadein}>
+			<div className="landing-page-data-container">
 				<div className="left-side-container">
 					<div className="left-side-title-container">
 						<p className="left-side-title">{title[1]}</p>
@@ -35,7 +28,9 @@ function LandingPage({title, description, contact, download}) {
 						<p className="left-side-description">{description}</p>
 					</div>
 					<div className="left-side-buttons-container">
-						<button className="contact-button">{contact}</button>
+						<Link to="/contact_me">
+							<button className="contact-button">{contact}</button>
+						</Link>
 						<button className="download-button">{download}</button>
 					</div>
 				</div>

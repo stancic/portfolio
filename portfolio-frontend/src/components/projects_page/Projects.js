@@ -14,9 +14,7 @@ import './projects.scss'
 
 function Projects() {
 	let projects = useSelector(state => state.projects)
-	let pageStatus = useSelector(state => state.page)
-	let timeout
-	const fadein = {animation: animations.fadeIn}
+
 
 	const [pictureURL, setPictureURL] = useState("https://i.imgur.com/DclRzsb.png")
 	const [description, setDescription] = useState("My idea of this project was to create a movie picker when you're bored, you can track those movies but you'll need to create account for that purpose. I used The Movie Database API for this project.")
@@ -43,15 +41,11 @@ function Projects() {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.remove("grow-cursor")
 	}
-	if(pageStatus === "/my_projects"){
-		timeout = setTimeout(() => {
-			document.querySelector(".projects-page-data-container").style.display = "flex";
-		}, 2700)
-	}
+
 	return (
 		<div>
 			<Navigation {...linksENProjects}/>
-			<div className="projects-page-data-container" style={fadein}>
+			<div className="projects-page-data-container">
 				<div className="projects-page-data-left">
 					<ul>
 						{projects.map(project => 

@@ -23,7 +23,7 @@ function Navigation({title, first_link, second_link}) {
 	const handleClick = (data) => {
 		dispatch(loadPage())
 		dispatch(switchPage(data.link))
-	} 
+	}
 
 	return (
 		<div>

@@ -35,6 +35,7 @@ function Loading() {
 	else{
 		clearTimeout(timeout)
 	}
+	console.log("For some freaking reason it doesn't work without this", "\nload state:", loadState, "offset:", offset)
 
 	return (
 		<div className="loader-container" style={loadState ? {display: "flex"} : {display: "none"}}>

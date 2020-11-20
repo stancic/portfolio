@@ -4,6 +4,7 @@ import React from 'react'
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
 import ContactForm from './ContactForm'
+import { useSelector } from 'react-redux'
 
 
 //IMPORT STYLES
@@ -13,6 +14,13 @@ import './contact.scss'
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
 function Contact() {
+	let pageStatus = useSelector(state => state.page)
+	let timeout
+	if(pageStatus === "/"){
+		timeout = setTimeout(() => {
+			document.querySelector(".contact-content-container").style.display = "flex";
+		}, 2700)
+	}
 	return (
 		<div>
 			<Navigation {...linksENContact} />
