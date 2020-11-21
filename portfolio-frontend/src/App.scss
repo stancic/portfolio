@@ -2,7 +2,6 @@ body, html{
 	margin: 0;
 	padding: 0;
 	background-color: #1e2124;
-	font-family: 'Roboto', sans-serif;
 	overflow: hidden;
 	position: relative;
 }
@@ -10,6 +9,7 @@ body, html{
 	cursor: none;
 	-moz-cursor: none;
 	-ms-cursor: none;
+	font-family: 'Roboto', sans-serif;
 }
 
 .container-for-all{
