@@ -11,6 +11,8 @@
 	top: 0;
 	background-color: #1e2124;
 	transition: 3s all ease-out;
+	cursor: none !important;
+	pointer-events: none;
 	.progress-bar-container{
 		display: flex;
 		border-radius: 50%;

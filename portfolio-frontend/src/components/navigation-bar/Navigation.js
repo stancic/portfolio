@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { loadPage } from '../../reducers/loadingPageReducer'
-import { switchPage } from '../../reducers/pageStatusReducer'
 
 //IMPORT STYLES
 import './navigation.scss'
@@ -22,7 +21,7 @@ function Navigation({title, first_link, second_link}) {
 
 	const handleClick = (data) => {
 		dispatch(loadPage())
-		dispatch(switchPage(data.link))
+		removeStyle()
 	}
 
 	return (
