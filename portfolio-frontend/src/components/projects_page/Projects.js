@@ -72,8 +72,8 @@ function Projects() {
 										<p>&lt;view_code /&gt;</p>
 									</a>
 								</div>
-								<div className="display-style">
-									<a href={livePreviewURL} target="_blank" rel="noreferrer" onMouseOver={growCursor} onMouseLeave={removeStyle}>
+								<div className="display-style" onMouseOver={growCursor} onMouseLeave={removeStyle}>
+									<a href={livePreviewURL} target="_blank" rel="noreferrer" >
 										<AiFillEye className="link-icon"/>
 										<p>&lt;live_preview /&gt;</p>
 									</a>

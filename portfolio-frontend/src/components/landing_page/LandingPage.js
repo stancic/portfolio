@@ -2,7 +2,6 @@
 import React from 'react'
 import './landingpage.scss'
 import { animations } from 'react-animation'
-import { useSelector } from 'react-redux'
 
 
 //DATA OBJECTS IMPORTING
@@ -14,7 +13,6 @@ import { Link } from 'react-router-dom'
 
 
 function LandingPage({title, description, contact, download}) {
-	let pageStatus = useSelector(state => state.page)
 
 	return (
 		<div>
