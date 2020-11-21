@@ -29,12 +29,22 @@ function Contact() {
 						</div>
 					</div>
 					<div className="left-contact-container">
-						<p className="mail-container">
-							dinostancic7@gmail.com
-						</p>
-						<p className="location-container">
-							based in Kutina
-						</p>
+						<div className="mail-container">
+							<div className="before">
+								<div className="content"></div>
+							</div>
+							<p className="mail">
+								dinostancic7@gmail.com
+							</p>
+						</div>
+						<div className="location-container">
+							<div className="before">
+								<div className="content"></div>
+							</div>
+							<p className="location">
+								based in Kutina
+							</p>
+						</div>
 					</div>
 				</div>
 				<div className="right-form-and-message-container">

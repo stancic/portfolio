@@ -72,5 +72,8 @@
 .button-container{
 	.contact{
 		width: 30%;
+		&:focus{
+			outline: none;
+		}
 	}
 }

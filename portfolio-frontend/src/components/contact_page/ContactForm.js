@@ -70,7 +70,8 @@ function ContactForm() {
 					<button 
 					className="contact"
 					onMouseEnter={addStyle}
-					onMouseLeave={removeStyle}>
+					onMouseLeave={removeStyle}
+					type="button">
 						Contact me!
 					</button>
 				</div>

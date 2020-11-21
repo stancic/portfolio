@@ -37,37 +37,56 @@
 			flex-direction: column;
 			p{
 				color: white;
+				opacity: 0.6;
 				letter-spacing: 3px;
-				font-weight: 100;
+				font-weight: 300;
 				line-height: 1em;
 				font-size: 1em;
 				position: relative;
+				transition: .4s all ease;
+				&:hover{
+					opacity: 1;
+				}
 			}
-			p::before{
+			/*::before{
 				content: "";
 				display: blocK;
 				height: 1px;
 				background-color: white;
 				position: absolute;
-			}
+			}*/
 			.mail-container{
 				flex: 1;
 				display: flex;
-				justify-content: flex-end;
-				&::before{
-					width: 60%;
-					left: 0;
-					top: 50%;
+				.mail{
+					flex: 1;
+					display: flex;
+					justify-content: flex-end;
 				}
 			}
 			.location-container{
 				flex: 1;
 				display: flex;
-				justify-content: flex-end;
-				&::before{
-					width: 70%;
+				.location{
+					flex: 1;
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+			.before{
+				margin-right: 3em;
+				flex: 3;
+				position: relative;
+				.content{
+					content: "";
+					display: blocK;
+					height: 1px;
+					background-color: white;
+					position: absolute;
+					top: 50%; 
 					left: 0;
-					top: 50%;
+					width: 100%;
+					opacity: .6;
 				}
 			}
 		}
