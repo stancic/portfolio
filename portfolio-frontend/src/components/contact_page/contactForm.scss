@@ -1,2 +1,76 @@
 @import '../../rwd_variables.scss';
 
+
+.name-and-mail-container{
+	display: flex;
+	.name-container{
+		flex: 1;
+		display: flex;
+		justify-content: flex-start;
+		.name{
+			width: 90%;
+		}
+	}
+	.mail-container{
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
+		.mail{
+			width: 90%;
+		}
+	}
+}
+
+
+.subject-container{
+	display: flex;
+	.subject{
+		width: 100%;
+	}
+}
+
+
+
+.message-container{
+	display: flex;
+	.message{
+		width: 100%;
+		resize: none;
+	}
+}
+
+
+.input-size{
+	margin-bottom: 2em;
+	padding: 0.7em;
+	color: white;
+	font-size: 16px;
+	&::placeholder{
+		color: rgba(255, 255, 255, 0.459);
+		transition: .3s all ease;
+	}
+	&:hover{
+		&::placeholder{
+			color: rgb(255, 255, 255);
+		}
+	}
+	&:focus{
+		outline: none;
+	}
+}
+
+.border-and-background{
+	background-color: transparent;
+	border: 2px solid $tirkizna;
+	opacity: 0.5;
+	transition: .3s all ease;
+	&:hover{
+		opacity: 1;
+	}
+}
+
+.button-container{
+	.contact{
+		width: 30%;
+	}
+}

@@ -25,26 +25,9 @@
 		}
 		.left-side-buttons-container{
 			padding-top: 0.2em;
-			button{
-				position: relative;
-				display: inline-block;
-				background: linear-gradient($tirkizna, $tirkizna);
-				background-size: 0% 0%;
-				background-position: 50% 50%;
-				background-repeat: no-repeat;
-				border: 2px solid $tirkizna;
-				border-radius: 4px;
-				font-size: 1.1rem;
-				color: $tirkizna;
-				padding: 0.8em 3.3em;
-				transition: background-size .5s, color .5s;
-				&:hover{
-					background-size: 100% 100%;
-					color: white;
-				}				
-			}
-			.download-button{
-				justify-content: end;
+		}
+		.download-button{
+			justify-content: end;
 				margin-left: 3em;
 			}
 		}
@@ -58,4 +41,21 @@
 			height: 90%;
 		}
 	}
+	button{
+		position: relative;
+		display: inline-block;
+		background: linear-gradient($tirkizna, $tirkizna);
+		background-size: 0% 0%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		border: 2px solid $tirkizna;
+		border-radius: 4px;
+		font-size: 1.1rem;
+		color: $tirkizna;
+		padding: 0.8em 3.3em;
+		transition: background-size .5s, color .5s;
+		&:hover{
+			background-size: 100% 100%;
+			color: white;
+		}				
 }

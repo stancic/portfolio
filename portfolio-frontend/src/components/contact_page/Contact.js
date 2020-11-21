@@ -14,7 +14,6 @@ import './contact.scss'
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
 function Contact() {
-	
 	return (
 		<div>
 			<Navigation {...linksENContact} />
