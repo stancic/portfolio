@@ -1,0 +1,54 @@
+@import '../../rwd_variables.scss';
+
+@media(max-width: $biggerIpad){
+	.projects-page-data-container{
+		flex-direction: column;
+		
+		align-items: flex-start;
+		.projects-page-data-left{
+			margin: 0;
+			align-items: flex-start;
+			justify-content: left;
+		}
+	}
+}
+
+@media(max-width: $mobile){
+	.projects-page-data-container{
+		margin: 0;
+		padding-top: 15em;
+		.projects-page-data-left{
+			font-size: 1.7em;
+			margin-left: 1.3em;
+		}
+		.projects-page-data-right{
+			margin-left: 1.3em;
+			.project-image-gallery{
+				flex: 0.8;
+				.second-square{
+					top: 2em;
+					left: 1em;
+				}
+				.first-square{
+					top: 3em;
+					left: 2em;
+				}
+				.square{
+					width: 300px;
+					height: 150px;
+					img{
+						width: 300px;
+						height: 150px;
+					}
+				}
+				
+			}
+			.project-description{
+				width: 350px;
+				.description{
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+}
