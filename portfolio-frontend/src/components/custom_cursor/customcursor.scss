@@ -21,3 +21,12 @@
 	-webkit-transform: scale(2);
 	-ms-transform: scale(2);
 }
+
+@media(max-width: 1100px){
+	.custom-cursor{
+		display: none;
+	}
+	*{
+		cursor: pointer;
+	}
+}
