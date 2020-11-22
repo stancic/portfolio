@@ -11,6 +11,7 @@ import {linksENProjects} from '../data_objects/links'
 
 //IMPORT STYLES
 import './projects.scss'
+import './projectsPageMobile.scss'
 
 function Projects() {
 	let projects = useSelector(state => state.projects)

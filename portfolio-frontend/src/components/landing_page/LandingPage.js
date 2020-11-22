@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 //IMPORT STYLES
 import './landingpage.scss'
-import './loadingPageMobile.scss'
+import './landingPageMobile.scss'
 
 function LandingPage({title, description, contact, download}) {
 

@@ -1,19 +1,19 @@
 @import '../../rwd_variables.scss';
 
-@media(max-width: 1300px){
+@media(max-width: $biggerIpad){
 	.contact-button, .download-button{
 		font-size: 1rem;
 		padding: 0.4em 1.7em;
 	}
 }
 
-@media(max-width: 1100px){
+@media(max-width: $ipad){
 	.landing-page-data-container{
 		flex-direction: column;
 	}
 }
 
-@media(max-width: 800px){
+@media(max-width: $mobile){
 	.landing-page-data-container{
 		margin: -5em 0 0 0;
 		.left-side-container{
