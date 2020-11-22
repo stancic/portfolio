@@ -1,6 +1,5 @@
 //DEPENDENCIES IMPORT
 import React from 'react'
-import './landingpage.scss'
 import { animations } from 'react-animation'
 
 
@@ -11,6 +10,9 @@ import { linksENLanding } from '../data_objects/links'
 import Navigation from '../navigation-bar/Navigation'
 import { Link } from 'react-router-dom'
 
+//IMPORT STYLES
+import './landingpage.scss'
+import './loadingPageMobile.scss'
 
 function LandingPage({title, description, contact, download}) {
 
