@@ -1,0 +1,29 @@
+@import '../../rwd_variables.scss';
+
+@media(max-width: $biggerIpad){
+
+}
+
+@media(max-width: $ipad){
+
+}
+
+@media(max-width: $mobile){
+
+}
+
+@media(max-width: 1600px){
+	.contact-content-container{
+		.left-title-and-contact-container{
+			.left-title-container{
+				.normal-title{
+					margin: 0;
+					bottom: -0.3em;
+				}
+			}
+			.left-contact-container{
+				margin-top: 3em;
+			}
+		}
+	}
+}

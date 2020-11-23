@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 
 //IMPORT STYLES
 import './contact.scss'
-
+import './contactPageMobile.scss'
 
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
@@ -22,10 +22,10 @@ function Contact() {
 
 					<div className="left-title-container">
 						<div className="stroked-title-container">
-							<h1 className="stroked-title title-size">Let's talk.</h1>
+							<h1 className="normal-title title-size">Let's talk.</h1>
 						</div>
 						<div className="normal-title-container">
-							<h1 className="normal-title title-size">Let's talk.</h1>
+							<h1 className="stroked-title title-size">Let's talk.</h1>
 						</div>
 					</div>
 					<div className="left-contact-container">

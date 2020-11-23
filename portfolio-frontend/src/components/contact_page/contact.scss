@@ -18,15 +18,15 @@
 				font-size: 10em;
 				font-weight: 600;
 				display: inline;
+				width: 100%;
 			}
-			.stroked-title{
-				
+			.normal-title{
 				color: white;
 				position: absolute;
 				bottom: -1em;
 				left: 0.5em;
 			}
-			.normal-title{
+			.stroked-title{
 				color: $background;
 				text-shadow: -2px -2px 0 $tirkizna, 2px -2px 0 $tirkizna, -2px 2px 0 $tirkizna, 2px 2px 0 $tirkizna;
 			}
