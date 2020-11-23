@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React from 'react'
+import React, { useState } from 'react'
 
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
@@ -14,6 +14,8 @@ import './contactPageMobile.scss'
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
 function Contact() {
+
+
 	return (
 		<div>
 			<Navigation {...linksENContact} />

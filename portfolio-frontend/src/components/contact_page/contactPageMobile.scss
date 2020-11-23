@@ -1,15 +1,111 @@
 @import '../../rwd_variables.scss';
 
-@media(max-width: $biggerIpad){
-
-}
 
 @media(max-width: $ipad){
-
+	.contact-content-container{
+		flex-direction: column;
+		margin-top: 10em;
+		margin-left: 3em;
+		.left-title-and-contact-container{
+			margin-left: 4em;
+			margin-bottom: 3em;
+			.left-title-container{
+				.title-size{
+					font-size: 8em;
+				}
+			}
+			.left-contact-container{
+				display: none;
+			}
+		}
+	}
+	.name-and-mail-container{
+		flex-direction: column;
+		width: 100%;
+		.name-container{
+			.name{
+				width: 100% !important;
+			}
+		}
+		.mail-container{
+			justify-content: flex-start;
+			.mail{
+				width: 100% !important;
+			}
+		}
+	}
+	.button-container{
+		margin-bottom: 5em;
+		.contact{
+			width: 100%;
+		}
+	}
+	body,html{
+		overflow-y: auto;
+	}
 }
 
 @media(max-width: $mobile){
+	.contact-content-container{
+		margin-top: 6em;
+		margin-left: -1em;
+		.left-title-and-contact-container{
+			margin-left: 4.2em;
+			.left-title-container{
+				.title-size{
+					font-size: 4em;
+				}
+			}
+		}
+		.right-form-and-message-container{
+			.right-message-container{
+				.message{
+					width: 100%;
+					font-size: 1em;
+				}
+			}
+			.right-form-container{
+				width: 100%;
+			}
+		}
+	}
+	
+}
 
+@media(max-height: 900px){
+	.contact-content-container{
+		margin-top: 20em;
+	}
+}
+
+@media(max-height: 600px){
+	.contact-content-container{
+		margin-top: 30em;
+	}
+}
+
+@media(max-width: 400px){
+	.contact-content-container{
+		.left-title-and-contact-container{
+			.left-title-container{
+				.title-size{
+					font-size: 3.2em;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 300px){
+	.contact-content-container{
+		.left-title-and-contact-container{
+			.left-title-container{
+				.title-size{
+					font-size: 2.3em;
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 1600px){
@@ -24,6 +120,25 @@
 			.left-contact-container{
 				margin-top: 3em;
 			}
+		}
+	}
+
+	.name-and-mail-container{
+		.name-container{
+			.name{
+				width: 80%;
+			}
+		}
+		.mail-container{
+			.mail{
+				width: 80%;
+			}
+		}
+	}
+	.button-container{
+		.contact{
+			padding: 1em;
+			font-size: 1em;
 		}
 	}
 }
