@@ -1,6 +1,12 @@
+@import '../../rwd_variables.scss';
+
 .icons{
 	color: white;
 	font-size: 2em;
+	transition: .3s all ease;
+	&:hover{
+		color: $tirkizna; 
+	}
 }
 
 
