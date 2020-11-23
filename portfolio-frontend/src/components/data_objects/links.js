@@ -34,7 +34,20 @@ export const linksENContact = {
 		"data":	"<home />"
 	}
 }
-
+export const linksENMobile = {
+	"first_link": {
+		"link": "/",
+		"data":	"<home />"
+	},
+	"second_link": {
+		"link": "/contact_me",
+		"data":	"<contact_me />"
+	},
+	"third_link": {
+		"link": "/my_projects",
+		"data":	"<my_projects />"
+	}
+}
 
 
 export const linksHR = {

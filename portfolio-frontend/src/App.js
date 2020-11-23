@@ -17,6 +17,7 @@ import MobileNavigation from './components/navigation-bar/mobile-navigation/Mobi
 
 //DATA OBJECTS IMPORTING
 import { dataEN } from './components/data_objects/landingPageData'
+import { linksENMobile } from './components/data_objects/links'
 import Contact from './components/contact_page/Contact'
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 			<div className="container-for-all">
 				<CustomCursor />
 				<Socials />
-				<MobileNavigation />
+				<MobileNavigation {...linksENMobile}/>
 				<Switch>
 					<Route path="/my_projects">
 						<Loading />
