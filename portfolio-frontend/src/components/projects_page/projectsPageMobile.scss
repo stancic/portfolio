@@ -1,14 +1,36 @@
 @import '../../rwd_variables.scss';
 
 @media(max-width: $biggerIpad){
-	.projects-page-data-container{
-		flex-direction: column;
-		
-		align-items: flex-start;
+	.projects-page-data-container{		
 		.projects-page-data-left{
 			margin: 0;
 			align-items: flex-start;
 			justify-content: left;
+		}
+		.projects-page-data-right{
+			height: 60vh;
+			margin-left: 4em;
+			.project-image-gallery{
+				.square{
+					width: 400px;
+					height: 250px;
+					img{
+						width: 400px;
+						height: 250px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: $ipad){
+	.projects-page-data-container{
+		.projects-page-data-left{
+			font-size: 2em;
+		}
+		.projects-page-data-right{
+			margin-left: 0;
 		}
 	}
 }
@@ -16,13 +38,25 @@
 @media(max-width: $mobile){
 	.projects-page-data-container{
 		margin: 0;
-		padding-top: 15em;
+		padding-top: 12em;
+		flex-direction: column;
 		.projects-page-data-left{
 			font-size: 1.7em;
 			margin-left: 1.3em;
+			ul{
+				height: 150px !important;
+				width: 300px;
+				&::-webkit-scrollbar{
+					width: 10px;
+					}
+				&::-webkit-scrollbar-thumb{
+					background: rgba(128, 128, 128, 0.603);
+					border-radius: 10px;
+				}
+			}
 		}
-		.projects-page-data-right{
-			margin-left: 1.3em;
+		.projects-page-data-right{		
+			margin-left: 5em;
 			.project-image-gallery{
 				flex: 0.8;
 				.second-square{

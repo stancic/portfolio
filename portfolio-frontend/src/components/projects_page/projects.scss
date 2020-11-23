@@ -17,9 +17,19 @@
 		flex: 1;
 		font-size: 2.4em;
 		margin-left: 1.3em;
+		height: 400px;
 		justify-content: flex-start;
 		color: rgba(255, 255, 255, 0.507);
 		font-weight: 100;
+		overflow: auto;
+		&::-webkit-scrollbar{
+			width: 10px;
+		}
+		&::-webkit-scrollbar-thumb{
+			background: rgba(128, 128, 128, 0.603);
+			border-radius: 10px;
+		}
+
 		ul{
 			padding: 0;
 			list-style: none;
@@ -43,7 +53,6 @@
 		margin-right: 2em;
 		margin-left: 2em;
 		position: relative;
-		width: 100vw;
 		height: 70vh;
 		.project-image-gallery{
 			flex: 3;
