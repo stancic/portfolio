@@ -65,7 +65,7 @@
 	}
 }
 
-@media(max-width: 1300px){
+@media(max-width: $biggerIpad){
 	.navigation-title-and-icon-container{
 		.icon-container, .navigation-container{
 			display: none;
@@ -73,10 +73,16 @@
 	}
 }
 
-@media(max-width: 800px){
+@media(max-width: $mobile){
 	.navigation-title-and-icon-container{
 		.title-container{
 			font-size: 0.7em;
 		}
+	}
+}
+
+@media(max-width: 400px){
+	.navigation-title-and-icon-container{
+		margin-left: 2em;
 	}
 }
