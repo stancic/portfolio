@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { loadPage } from '../../reducers/loadingPageReducer'
@@ -24,9 +24,23 @@ function Navigation({title, first_link, second_link}) {
 		removeStyle()
 	}
 
+	const [scrollState, setScrollState] = useState(false);
+
+	document.body.addEventListener("scroll", event => {
+		let scrolled = document.body.scrollTop
+		if(scrolled>30){
+			setScrollState(true);
+		} else {
+			setScrollState(false);
+		}
+	})
+
+	const hiddenScrolledState = {
+		opacity: 0
+	}
 	return (
 		<div>
-			<div className="navigation-title-and-icon-container">
+			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {}}>
 					<div className="title-container">
 						<h1>{title}</h1>
 					</div>
