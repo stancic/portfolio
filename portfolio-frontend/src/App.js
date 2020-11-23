@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import { getProjects } from './reducers/projectsReducer'
 
 //IMPORT STYLES
 import './App.scss'
@@ -12,8 +13,7 @@ import Socials from './components/socials/Socials'
 import LandingPage from './components/landing_page/LandingPage'
 import CustomCursor from './components/custom_cursor/CustomCursor'
 import Projects from './components/projects_page/Projects'
-import { getProjects } from './reducers/projectsReducer'
-
+import MobileNavigation from './components/navigation-bar/mobile-navigation/MobileNavigation'
 
 //DATA OBJECTS IMPORTING
 import { dataEN } from './components/data_objects/landingPageData'
@@ -30,6 +30,7 @@ function App() {
 			<div className="container-for-all">
 				<CustomCursor />
 				<Socials />
+				<MobileNavigation />
 				<Switch>
 					<Route path="/my_projects">
 						<Loading />
