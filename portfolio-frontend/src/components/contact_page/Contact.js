@@ -1,10 +1,9 @@
 //IMPORT DEPENDENCIES
-import React, { useState } from 'react'
+import React from 'react'
 
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
 import ContactForm from './ContactForm'
-import { useSelector } from 'react-redux'
 
 
 //IMPORT STYLES
