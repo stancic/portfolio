@@ -51,7 +51,7 @@ function App() {
 		return (
 			<Router>
 				<Switch>
-					<Route exact path="/minicms">
+					<Route path="/minicms">
 						<div className="cms-container">
 							<div className="top-container">
 								<div className="top-image-and-header-container">
