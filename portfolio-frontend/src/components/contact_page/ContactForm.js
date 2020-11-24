@@ -1,10 +1,14 @@
 //IMPORT DEPENDENCIES
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { send } from '../../reducers/mailReducer'
 
 //IMPORT STYLES
 import './contactForm.scss'
 
 function ContactForm() {
+
+	const dispatch = useDispatch()
 
 	const [name, setName] = useState('')
 	const [mail, setMail] = useState('')
@@ -20,10 +24,23 @@ function ContactForm() {
 		cursor.classList.remove("grow-cursor")
 	}
 	
+	const sendMail = (event) => {
+		let mailObject = {
+			name: name,
+			mail: mail,
+			subject: subject,
+			message: message
+		}
+		dispatch(send(mailObject))
+		setName('')
+		setMail('')
+		setSubject('')
+		setMessage('')
+	}
 
 	return (
 		<div>
-			<form>
+			<form onSubmit={sendMail}>
 				<div className="name-and-mail-container">
 					<div className="name-container">
 						<input 
@@ -60,7 +77,7 @@ function ContactForm() {
 					cols="60" 
 					rows="10" 
 					className="message input-size border-and-background" 
-					onChange={({target}) => setSubject(target.value)} 
+					onChange={({target}) => setMessage(target.value)} 
 					onMouseEnter={addStyle}
 					onMouseLeave={removeStyle}
 					placeholder="&lt;message /&gt;"></textarea>
@@ -71,7 +88,7 @@ function ContactForm() {
 					className="contact"
 					onMouseEnter={addStyle}
 					onMouseLeave={removeStyle}
-					type="button">
+					type="submit">
 						Contact me!
 					</button>
 				</div>
