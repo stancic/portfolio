@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'http://localhost:3333/mailSend'
+const baseURL = 'https://stancic-portfolio-api.herokuapp.com/mailSend'
 
 const sendMail = async ( mailObject ) => {
 	const response = await axios.post(baseURL, mailObject)

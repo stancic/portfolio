@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import Navigation from '../navigation-bar/Navigation'
 import { useSelector } from 'react-redux'
-import { animations } from 'react-animation'
 import { FaCode } from 'react-icons/fa'
 import { AiFillEye } from 'react-icons/ai'
 
