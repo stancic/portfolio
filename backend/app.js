@@ -23,8 +23,8 @@ app.use(express.json())
 app.use(middleware.requestLogger)
 app.use(middleware.tokenExtractor)
 
-app.use('/customcms/api/projects/ec98f81637370f86db84cf8448ecf792', projectsRouter)
-app.use('/customcms/api/login/ec98f81637370f86db84cf8448ecf792', loginRouter)
+app.use('/projects/ec98f81637370f86db84cf8448ecf792', projectsRouter)
+app.use('/login/ec98f81637370f86db84cf8448ecf792', loginRouter)
 app.use('/mailSend', mailRouter)
 
 app.use(middleware.unknownEndpoint)
