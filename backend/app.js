@@ -10,7 +10,7 @@ const middleware = require('./utils/middleware')
 //Routers
 const projectsRouter = require('./controllers/projects_controller')
 const loginRouter = require('./controllers/login_controller')
-
+const mailRouter = require('./controllers/mail_send_controller')
 
 mongoose.connect(config.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 		.then(() => logger.info('connected to MongoDB'))
@@ -25,6 +25,7 @@ app.use(middleware.tokenExtractor)
 
 app.use('/customcms/api/projects/ec98f81637370f86db84cf8448ecf792', projectsRouter)
 app.use('/customcms/api/login/ec98f81637370f86db84cf8448ecf792', loginRouter)
+app.use('/mailSend', mailRouter)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
