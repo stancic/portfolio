@@ -43,7 +43,7 @@ function Contact() {
 								<div className="content"></div>
 							</div>
 							<p className="location">
-								based in Kutina
+								<a href="https://goo.gl/maps/9LTShUcn8SwS7HZW9" target="_blank" rel="noreferrer">based in Kutina</a>
 							</p>
 						</div>
 					</div>
