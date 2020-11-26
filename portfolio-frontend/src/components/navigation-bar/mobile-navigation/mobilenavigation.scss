@@ -7,14 +7,16 @@
 @media(max-width: $biggerIpad){
 	.mobile-nav-icon-container{
 		position: fixed;
-		top: 2.5em;
-		right: 5em;
+		top: 2.55em;
+		right: 3.7em;
 		color: white;
 		z-index: 11;
+		display: block;
 		.menu-icon{
 			position: fixed;
 			transition: .3s all ease;
-			font-size: 2.4em;
+			font-size: 2em;
+			color: rgb(255, 255, 255);
 		}
 	}
 	.mobile-nav-container{

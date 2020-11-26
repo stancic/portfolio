@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { IoIosMenu, IoIosClose } from 'react-icons/io'
 import { Link } from 'react-router-dom'
-
 //IMPORT DATA OBJECTS
 
 
