@@ -8,7 +8,14 @@ mailRouter.post('/', async(request, response) => {
 	let mail = body.mail 
 	let subject =  body.subject 
 	let message = body.message 
-	let text = `Sent from ${name}\n${message}`
+	let text = `
+****************************************\n
+Name: ${name}\n
+Mail: ${mail}\n
+****************************************\n
+Message:\n\n${message}\n
+****************************************`
+
 	let mailOptions = {
 		from: mail,
 		to: process.env.GMAIL_ADRESS,
