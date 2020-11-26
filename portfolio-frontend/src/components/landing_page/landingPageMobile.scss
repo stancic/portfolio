@@ -1,6 +1,9 @@
 @import '../../rwd_variables.scss';
 
 @media(max-width: $biggerIpad){
+	.landing-page-data-container{
+		margin-left: 0;
+	}
 	.contact-button, .download-button{
 		font-size: 1rem;
 		padding: 0.4em 1.7em;
@@ -9,33 +12,44 @@
 
 @media(max-width: $ipad){
 	.landing-page-data-container{
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 }
 
 @media(max-width: $mobile){
 	.landing-page-data-container{
-		margin: -5em 0 0 0;
+		margin: 0;
 		.left-side-container{
 			font-size: 2em;
-			margin: 0;
-			text-align: center;
+			margin-left: 0;
+			.left-side-title-container, .left-side-description-container{
+				margin-left: 5%;
+			}
 		}
 		.right-side-container{
 			margin-top: 1em;
 		}
 	}
 	.left-side-buttons-container{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
 		.download-button{
 			display: none;
 		}
 		.contact-button{
-			position: absolute;
-			top: 115%;
-			width: 50%;
-			left: 0;
-			right: 0;
-			margin: auto auto;
+			padding:  0.5em 3em;
+			font-size: 0.6em;
+		}
+	}
+}
+
+@media(max-height: 570px){
+	.landing-page-data-container{
+		margin-top: 40%;
+		.left-side-buttons-container{
+			display: flex;
+			margin-top: 30px;
 		}
 	}
 }

@@ -100,3 +100,25 @@
 		}
 	}
 }
+
+@media(max-height: 600px){
+	.projects-page-data-container{
+		margin-top: 10%;
+		.projects-page-data-right{
+			height: 80vh;
+			.project-description{
+				margin-top: 2%;
+			}
+		}
+	}
+}
+
+@media(max-height: 500px){
+	.projects-page-data-container{
+		.projects-page-data-right{
+			.project-description{
+				margin-top: 60%;
+			}
+		}
+	}
+}

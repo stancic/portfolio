@@ -84,3 +84,12 @@
 		
 	}
 }
+
+@media(max-height: 400px){
+	.mobile-nav-container{
+		overflow-y: auto;
+		.mobile-nav-data-container{
+			margin-top: 40%;
+		}
+	}
+}

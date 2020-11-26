@@ -16,7 +16,9 @@ function MobileNavigation({first_link, second_link, third_link}) {
 	const handleIconChange = () => {
 		if(iconState){
 			setIconState(false)
-		} else setIconState(true)
+		} else {
+			setIconState(true)
+		}
 	}
 
 	return (

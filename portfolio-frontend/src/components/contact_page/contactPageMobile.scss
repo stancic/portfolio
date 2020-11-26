@@ -84,6 +84,12 @@
 	}
 }
 
+@media(max-height: 450px){
+	.contact-content-container{
+		margin-top: 37em;
+	}
+}
+
 @media(max-width: 400px){
 	.contact-content-container{
 		.left-title-and-contact-container{
@@ -142,3 +148,4 @@
 		}
 	}
 }
+
