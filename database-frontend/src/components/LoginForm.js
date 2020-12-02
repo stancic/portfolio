@@ -18,22 +18,30 @@ function LoginForm() {
 	setPassword('')
 	}
 	return (
-			
-			<Form onSubmit={handleLogin}>
-				<div className="form-input-container">
-					<Form.Group controlId="formUsername">
-						<Form.Label className="label-for-form">Username</Form.Label>
-						<Form.Control type="text" placeholder="Enter username" onChange={({target}) => setUsername(target.value)} className="form-input"/>
-					</Form.Group>
-					<Form.Group controlId="formPassword">
-						<Form.Label className="label-for-form">Password</Form.Label>
-						<Form.Control type="password" placeholder="Password" onChange={({target}) => setPassword(target.value)} className="form-input"/>
-					</Form.Group>
+		<div className="login-parent-container">
+			<div className="login-container">
+				<div className="img-and-login-form-container">
+					<div className="img-container">
+						<img src="./img/Logo.png" alt="" className="login-form-image" />
+					</div>
+					<Form onSubmit={handleLogin}>
+						<div className="form-input-container">
+						<Form.Group controlId="formUsername">
+							<Form.Label className="label-for-form">Username</Form.Label>
+							<Form.Control type="text" placeholder="Enter username" onChange={({target}) => setUsername(target.value)} className="form-input"/>
+						</Form.Group>
+						<Form.Group controlId="formPassword">
+							<Form.Label className="label-for-form">Password</Form.Label>
+							<Form.Control type="password" placeholder="Password" onChange={({target}) => setPassword(target.value)} className="form-input"/>
+						</Form.Group>
+						</div>
+						<div className="form-button-container">
+							<Button variant="outline-primary" type="submit">Log in</Button>
+						</div>
+					</Form>
 				</div>
-				<div className="form-button-container">
-					<Button variant="outline-primary" type="submit">Log in</Button>
-				</div>
-			</Form>
+			</div>	
+		</div>
 	)
 }
 
