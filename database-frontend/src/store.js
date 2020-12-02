@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import projectsReducer from './reducers/projectsReducer'
 import loginReducer from './reducers/loginReducer'
 import throttle from 'lodash/throttle'
+import notificationStatusReducer from './reducers/notificationStatusReducer'
 
 //local storage for saving user
 
@@ -38,7 +39,8 @@ const persistedState = loadState()
 
 const reducer = combineReducers({
 	projects: projectsReducer,
-	user: loginReducer
+	user: loginReducer,
+	notification: notificationStatusReducer
 })
 
 const store = createStore(reducer, persistedState, composeWithDevTools(applyMiddleware(thunk)))
@@ -49,6 +51,7 @@ store.subscribe(throttle(() => {
 		user: store.getState().user
 	})
 }, 1000))
-console.log(store.getState())
+
+store.subscribe(() => console.log(store.getState()))
 
 export default store

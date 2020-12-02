@@ -1,22 +1,31 @@
 import React, { useState } from 'react'
 import './LoginForm.scss'
 import { Button, Form } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../reducers/loginReducer'
 import { useHistory } from 'react-router-dom'
 
 function LoginForm() {
 	const dispatch = useDispatch()
-	const history = useHistory()
+	let history = useHistory() 
+
+	let userStatus = useSelector(state => state.user)
+
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
+
+	
 	const handleLogin = async (event) => {
-	event.preventDefault()
-	dispatch(login({ username, password }))
-	history.push("/minicms")
-	setUsername('')
-	setPassword('')
+		event.preventDefault()
+		dispatch(login({ username, password }))
+		if(userStatus === 401){
+			setUsername('')
+			setPassword('')
+		} else {
+			history.push('/minicms')
+		}
 	}
+
 	return (
 		<div className="login-parent-container">
 			<div className="login-container">

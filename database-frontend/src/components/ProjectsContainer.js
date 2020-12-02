@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { logout } from '../reducers/loginReducer'
+import { initializeProjects } from '../reducers/projectsReducer'
 import Projects from './Projects'
 import ProjectsForm from './ProjectsForm'
 
 function ProjectsContainer() {
 	const dispatch = useDispatch()
+	const history = useHistory()
 
 	const handleLogout = () => {
 		dispatch(logout())
+		history.push('/')
 	}
 
+	useEffect(()=>{
+		dispatch(initializeProjects())
+	},[dispatch])
+
 	const projects = useSelector(state => state.projects)
+
 	
 	return (
 		<div className="cms-container">
@@ -26,7 +34,7 @@ function ProjectsContainer() {
 					<h3>Mini CMS</h3>
 				</div>
 				<div className="logout-button-container">
-					<Link to="/"><Button variant="danger" onClick={() => handleLogout()}>Logout</Button></Link>
+					<Button variant="danger" onClick={() => handleLogout()}>Logout</Button>
 				</div>
 				</div>
 			</div>
