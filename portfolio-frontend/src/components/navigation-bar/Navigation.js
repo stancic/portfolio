@@ -1,15 +1,12 @@
 //IMPORT DEPENDENCIES
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { loadPage } from '../../reducers/loadingPageReducer'
 
 //IMPORT STYLES
 import './navigation.scss'
 
 
 function Navigation({title, first_link, second_link}) {
-	const dispatch = useDispatch()
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.add("grow-cursor")
@@ -20,7 +17,6 @@ function Navigation({title, first_link, second_link}) {
 	}
 
 	const handleClick = (data) => {
-		dispatch(loadPage())
 		removeStyle()
 	}
 
