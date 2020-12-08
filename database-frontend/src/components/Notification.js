@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout } from '../reducers/loginReducer'
 import { hideNotification } from '../reducers/notificationStatusReducer'
@@ -14,16 +14,13 @@ function Notification({message}) {
 		dispatch(logout())
 	}
 
-	useEffect(()=>{
-		setTimeout(()=>{
-			dispatch(hideNotification())
-			dispatch(logout())
-		}, 5000)
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	},[notificationState])
+	setTimeout(function(){
+		dispatch(hideNotification())
+		dispatch(logout())
+	},5000)
 
 	return (
-		<div className="notification-container" style={notificationState ? {top: '15%'} : {top: '-15%'}}>
+		<div className="notification-container" style={notificationState ? {top: '15%'} : {top: '-25%'}}>
 			<div className="notification-message-container">
 				<p className="notification-message">wrong credentials...</p>
 			</div>

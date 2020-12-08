@@ -13,6 +13,7 @@
 	border: 1px solid $tirkizna;
 	border-radius: 13px;
 	font-family: $roboto;
+	top: -25%;
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
@@ -32,5 +33,18 @@
 		bottom: 5px;
 		right: 10px;
 		cursor: pointer;
+	}
+}
+
+@media(max-width: 500px){
+	.notification-container{
+		width: 25em;
+	}
+}
+
+@media(max-width: 410px){
+	.notification-container{
+		width: 19em;
+		height: 8em;
 	}
 }
