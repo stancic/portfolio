@@ -33,12 +33,10 @@ function App() {
 				<Socials />
 				<MobileNavigation {...linksENMobile}/>
 				<Switch>
-					<Route path="/my_projects">
-						<Loading />
+					<Route path="/my_projects">		
 						<Projects />
 					</Route>
 					<Route path="/contact_me">
-						<Loading />
 						<Contact />
 					</Route>
 					<Route path="/">
