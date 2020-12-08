@@ -52,6 +52,5 @@ store.subscribe(throttle(() => {
 	})
 }, 1000))
 
-store.subscribe(() => console.log(store.getState()))
 
 export default store
