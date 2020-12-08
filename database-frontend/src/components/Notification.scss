@@ -1,0 +1,36 @@
+@import '../rwd_variables.scss';
+
+.notification-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #272c31;
+	position: fixed;
+	padding: 0;
+	width: 30em;
+	height: 10em;
+	border: 1px solid $tirkizna;
+	border-radius: 13px;
+	font-family: $roboto;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 10px 12px 15px 3px #14171a;
+	transition: .5s all ease;
+	.notification-message-container{
+		.notification-message{
+			color: $tirkizna;
+			font-size: 1.6em;
+			font-weight: 300;
+		}
+	}
+	.close-notification-container{
+		position: absolute;
+		color: $tirkizna;
+		font-size: 2em;
+		bottom: 5px;
+		right: 10px;
+		cursor: pointer;
+	}
+}
