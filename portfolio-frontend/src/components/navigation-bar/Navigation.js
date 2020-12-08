@@ -22,6 +22,8 @@ function Navigation({title, first_link, second_link}) {
 	}
 
 	const [scrollState, setScrollState] = useState(false);
+	const [didMount, setDidMount] = useState(false);
+
 
 	document.body.addEventListener("scroll", event => {
 		let scrolled = document.body.scrollTop
@@ -37,13 +39,22 @@ function Navigation({title, first_link, second_link}) {
 	}
 
 	useEffect(()=>{
+		setDidMount(true)
 		setTimeout(()=>{
 			navigationRef.current.style.opacity = 1
 		}, 100)
+		return() => {
+			setDidMount(false)
+		}
 	},[])
+
+	if(!didMount){
+		return null
+	}
+
 	return (
 		<div>
-			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {}} ref={navigationRef}>
+			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {opacity: '1'}} ref={navigationRef}>
 					<div className="title-container">
 						<h1>{title}</h1>
 					</div>

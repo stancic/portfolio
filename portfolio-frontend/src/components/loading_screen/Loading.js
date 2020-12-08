@@ -58,7 +58,7 @@ function Loading() {
 					strokeDashoffset={offset}
 				/>
 			</svg>
-			<img src="../../img/Logo.png" alt=""/>
+			<img className="loading-logo" src="../../img/Logo.png" alt=""/>
 		</div>
 	)
 }

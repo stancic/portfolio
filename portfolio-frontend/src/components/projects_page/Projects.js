@@ -22,6 +22,8 @@ function Projects() {
 	const [livePreviewURL, setLivePreview] = useState("https://stancic.github.io/boredMoviePicker/")
 
 	const projectPageRef = useRef()
+	const [didMount, setDidMount] = useState(false);
+
 
 
 	const changeDescAndImage = (project) => {
@@ -44,10 +46,18 @@ function Projects() {
 	}
 
 	useEffect(()=>{
+		setDidMount(true)
 		setTimeout(()=>{
 			projectPageRef.current.style.opacity = 1
 		}, 100)
+		return() => {
+			setDidMount(false)
+		}
 	},[])
+
+	if(!didMount){
+		return null
+	}
 
 	return (
 		<div>

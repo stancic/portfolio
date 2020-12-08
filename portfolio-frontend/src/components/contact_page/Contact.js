@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
@@ -13,13 +13,24 @@ import './contactPageMobile.scss'
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
 function Contact() {
+
+	const [didMount, setDidMount] = useState(false);
+
 	const contactPageRef = useRef()
 	
 	useEffect(()=>{
+		setDidMount(true)
 		setTimeout(()=>{
 			contactPageRef.current.style.opacity = 1
 		}, 100)
+		return() => {
+			setDidMount(false)
+		}
 	},[])
+
+	if(!didMount){
+		return null
+	}
 
 	return (
 		<div>

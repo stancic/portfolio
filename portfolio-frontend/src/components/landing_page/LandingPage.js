@@ -1,5 +1,5 @@
 //DEPENDENCIES IMPORT
-import React, { useRef, useState, useLayoutEffect, componentDid, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { AnimateOnChange } from 'react-animation'
 
 //DATA OBJECTS IMPORTING
@@ -14,6 +14,8 @@ import './landingpage.scss'
 import './landingPageMobile.scss'
 
 function LandingPage({title, description, contact, download}){
+
+	const [didMount, setDidMount] = useState(false);
 
 	const [current, setCurrent] = useState(0)
 	const [currentWidth, setCurrentWidth] = useState(0)
@@ -31,10 +33,11 @@ function LandingPage({title, description, contact, download}){
 		}
 	}
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const interval = setInterval(()=>{
 			setCurrent(nextItem(current))
 			nextTextRef.current.innerText = title[nextItem(current)]
+			// eslint-disable-next-line no-unused-vars
 			const nextTextSize = nextTextRef.current.offsetWidth 
 			setCurrentWidth(nextTextRef.current.offsetWidth)
 			setCurrentTextStyle({
@@ -53,10 +56,18 @@ function LandingPage({title, description, contact, download}){
 
 
 	useEffect(()=>{
+		setDidMount(true)
 		setTimeout(()=>{
 			containerRef.current.style.opacity = 1
 		}, 100)
+		return() => {
+			setDidMount(false)
+		}
 	},[])
+	
+	if(!didMount){
+		return null
+	}
 	return (
 		<div>
 			<Navigation {...linksENLanding}/>
