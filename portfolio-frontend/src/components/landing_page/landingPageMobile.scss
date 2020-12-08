@@ -13,6 +13,13 @@
 @media(max-width: $ipad){
 	.landing-page-data-container{
 		flex-direction: column-reverse;
+		.right-side-container{
+			flex: 1;
+			svg{
+				width: 370px;
+				height: 370px;
+			}
+		}
 	}
 }
 
@@ -42,6 +49,12 @@
 			font-size: 0.6em;
 		}
 	}
+	.right-side-container{
+		svg{
+			width: 200px;
+			height: 200px;
+		}
+	}
 }
 
 @media(max-height: 570px){
@@ -50,6 +63,12 @@
 		.left-side-buttons-container{
 			display: flex;
 			margin-top: 30px;
+		}
+		.right-side-container{
+			svg{
+				width: 200px;
+				height: 200px;
+			}
 		}
 	}
 }
