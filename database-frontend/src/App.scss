@@ -48,3 +48,9 @@ body, html{
 		
 	}
 }
+
+@media(max-height: 770px){
+	body,html{
+		overflow-y: auto;
+	}
+}
