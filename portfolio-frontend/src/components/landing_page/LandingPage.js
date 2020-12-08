@@ -1,6 +1,6 @@
 //DEPENDENCIES IMPORT
-import React from 'react'
-
+import React, { useRef, useState, useLayoutEffect } from 'react'
+import { AnimateOnChange } from 'react-animation'
 
 //DATA OBJECTS IMPORTING
 import { linksENLanding } from '../data_objects/links'
@@ -15,13 +15,61 @@ import './landingPageMobile.scss'
 
 function LandingPage({title, description, contact, download}) {
 
+	const [current, setCurrent] = useState(0)
+	const [currentWidth, setCurrentWidth] = useState(0)
+	const [currentTextStyle, setCurrentTextStyle] = useState({})
+	const currentTextRef = useRef()
+	const nextTextRef = useRef()
+
+	const nextItem = current => {
+		if(current === title.length - 1){
+			return 0
+		} else {
+			return current + 1
+		}
+	}
+
+	useLayoutEffect(() => {
+		const interval = setInterval(()=>{
+			setCurrent(nextItem(current))
+			nextTextRef.current.innerText = title[nextItem(current)]
+			const nextTextSize = nextTextRef.current.offsetWidth
+			setCurrentWidth(nextTextRef.current.offsetWidth)
+			setCurrentTextStyle({
+				opacity: 0
+			})
+			setTimeout(()=>{
+				setCurrentTextStyle({
+					opacity: 1
+				})
+			}, 500)
+		}, 2000)
+		return(()=>{
+			clearInterval(interval)
+		})
+	})
+
 	return (
 		<div>
 			<Navigation {...linksENLanding}/>
 			<div className="landing-page-data-container">
 				<div className="left-side-container">
 					<div className="left-side-title-container">
-						<p className="left-side-title">{title[1]}</p>
+						<div className="left-side-title">
+							<AnimateOnChange className="foo" durationOut={500}>
+								<div className="container"
+									style={{width: currentWidth ? currentWidth + 'px' : 'auto'}}
+									>
+									<div className="text-width-wrapper"
+										style={currentTextStyle}
+										ref={currentTextRef}
+										>
+										{title[current]}
+									</div>
+								</div>
+							</AnimateOnChange>
+						</div>
+						<div className="hidden-text" ref={nextTextRef}></div>
 					</div>
 					<div className="left-side-description-container">
 						<p className="left-side-description">{description}</p>
