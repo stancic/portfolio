@@ -2,6 +2,7 @@
 
 .contact-content-container{
 	display: flex;
+	opacity: 0;
 	flex-direction: row;
 	margin-left: 6em;
 	margin-right: 3em;
@@ -9,6 +10,7 @@
 	font-family: 'Roboto', sans-serif;
 	width: 90vw;
 	z-index: -4;
+	transition: .4s all ease-in-out;
 	.left-title-and-contact-container{
 		flex: 1;
 		position: relative;
@@ -27,7 +29,7 @@
 				left: 0.5em;
 			}
 			.stroked-title{
-				color: $background;
+				color: #000000;  /* fallback for old browsers */
 				text-shadow: -2px -2px 0 $tirkizna, 2px -2px 0 $tirkizna, -2px 2px 0 $tirkizna, 2px 2px 0 $tirkizna;
 			}
 		}

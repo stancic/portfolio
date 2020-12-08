@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 //IMPORT COMPONENTS
 import Navigation from '../navigation-bar/Navigation'
@@ -13,12 +13,18 @@ import './contactPageMobile.scss'
 //DATA OBJECT IMPORT
 import { linksENContact } from '../data_objects/links'
 function Contact() {
-
+	const contactPageRef = useRef()
+	
+	useEffect(()=>{
+		setTimeout(()=>{
+			contactPageRef.current.style.opacity = 1
+		}, 100)
+	},[])
 
 	return (
 		<div>
 			<Navigation {...linksENContact} />
-			<div className="contact-content-container">
+			<div className="contact-content-container" ref={contactPageRef}>
 				<div className="left-title-and-contact-container">
 
 					<div className="left-title-container">

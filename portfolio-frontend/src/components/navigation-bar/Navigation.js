@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 //IMPORT STYLES
@@ -7,6 +7,7 @@ import './navigation.scss'
 
 
 function Navigation({title, first_link, second_link}) {
+	const navigationRef = useRef()
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.add("grow-cursor")
@@ -34,9 +35,15 @@ function Navigation({title, first_link, second_link}) {
 	const hiddenScrolledState = {
 		opacity: 0
 	}
+
+	useEffect(()=>{
+		setTimeout(()=>{
+			navigationRef.current.style.opacity = 1
+		}, 100)
+	},[])
 	return (
 		<div>
-			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {}}>
+			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {}} ref={navigationRef}>
 					<div className="title-container">
 						<h1>{title}</h1>
 					</div>

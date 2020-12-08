@@ -1,5 +1,5 @@
 //DEPENDENCIES IMPORT
-import React, { useRef, useState, useLayoutEffect } from 'react'
+import React, { useRef, useState, useLayoutEffect, componentDid, useEffect } from 'react'
 import { AnimateOnChange } from 'react-animation'
 
 //DATA OBJECTS IMPORTING
@@ -13,13 +13,15 @@ import { Link } from 'react-router-dom'
 import './landingpage.scss'
 import './landingPageMobile.scss'
 
-function LandingPage({title, description, contact, download}) {
+function LandingPage({title, description, contact, download}){
 
 	const [current, setCurrent] = useState(0)
 	const [currentWidth, setCurrentWidth] = useState(0)
 	const [currentTextStyle, setCurrentTextStyle] = useState({})
 	const currentTextRef = useRef()
 	const nextTextRef = useRef()
+
+	const containerRef = useRef()
 
 	const nextItem = current => {
 		if(current === title.length - 1){
@@ -33,7 +35,7 @@ function LandingPage({title, description, contact, download}) {
 		const interval = setInterval(()=>{
 			setCurrent(nextItem(current))
 			nextTextRef.current.innerText = title[nextItem(current)]
-			const nextTextSize = nextTextRef.current.offsetWidth
+			const nextTextSize = nextTextRef.current.offsetWidth 
 			setCurrentWidth(nextTextRef.current.offsetWidth)
 			setCurrentTextStyle({
 				opacity: 0
@@ -49,10 +51,16 @@ function LandingPage({title, description, contact, download}) {
 		})
 	})
 
+
+	useEffect(()=>{
+		setTimeout(()=>{
+			containerRef.current.style.opacity = 1
+		}, 100)
+	},[])
 	return (
 		<div>
 			<Navigation {...linksENLanding}/>
-			<div className="landing-page-data-container">
+			<div className="landing-page-data-container" ref={containerRef}>
 				<div className="left-side-container">
 					<div className="left-side-title-container">
 						<div className="left-side-title">

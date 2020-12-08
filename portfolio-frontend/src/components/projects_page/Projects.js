@@ -1,5 +1,5 @@
 //IMPORT DEPENDENCIES
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navigation from '../navigation-bar/Navigation'
 import { useSelector } from 'react-redux'
 import { FaCode } from 'react-icons/fa'
@@ -21,6 +21,7 @@ function Projects() {
 	const [gitURL, setGitURL] = useState("https://github.com/stancic/boredMoviePicker")
 	const [livePreviewURL, setLivePreview] = useState("https://stancic.github.io/boredMoviePicker/")
 
+	const projectPageRef = useRef()
 
 
 	const changeDescAndImage = (project) => {
@@ -42,10 +43,16 @@ function Projects() {
 		cursor.classList.remove("grow-cursor")
 	}
 
+	useEffect(()=>{
+		setTimeout(()=>{
+			projectPageRef.current.style.opacity = 1
+		}, 100)
+	},[])
+
 	return (
 		<div>
 			<Navigation {...linksENProjects}/>
-			<div className="projects-page-data-container">
+			<div className="projects-page-data-container" ref={projectPageRef}>
 				<div className="projects-page-data-left">
 					<ul>
 						{projects.map(project => 

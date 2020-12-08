@@ -3,13 +3,14 @@
 .navigation-title-and-icon-container{
 	position: fixed;
 	width: 100%;
+	opacity: 0;
 	top: 0;
 	left: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	margin: 2em 3em 0 3em;
-	transition: .3s all ease;
+	transition: .4s all ease;
 	.title-container{
 		flex: 1;
 		color: white;
@@ -88,5 +89,29 @@
 @media(max-width: 400px){
 	.navigation-title-and-icon-container{
 		margin-left: 2em;
+	}
+}
+
+
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
