@@ -12,7 +12,7 @@ function Projects({ projects }) {
 	}
 	
 	return (
-		<div>
+		<div className="mini-cms-container">
 			<Table responsive="lg" striped bordered variant="dark">
 				<thead>
 					<tr>

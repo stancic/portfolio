@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { logout } from '../reducers/loginReducer'
 import { initializeProjects } from '../reducers/projectsReducer'
 import Projects from './Projects'
