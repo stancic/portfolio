@@ -7,7 +7,7 @@ import './navigation.scss'
 
 
 function Navigation({title, first_link, second_link}) {
-	const navigationRef = useRef()
+	const titleRef = useRef()
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
 		cursor.classList.add("grow-cursor")
@@ -37,14 +37,15 @@ function Navigation({title, first_link, second_link}) {
 	const hiddenScrolledState = {
 		opacity: 0
 	}
-
+	
 	useEffect(()=>{
 		setDidMount(true)
 		setTimeout(()=>{
-			navigationRef.current.style.opacity = 1
-		}, 100)
+			titleRef.current.style.opacity = 1
+		}, 300)
 		return() => {
 			setDidMount(false)
+
 		}
 	},[])
 
@@ -54,10 +55,16 @@ function Navigation({title, first_link, second_link}) {
 
 	return (
 		<div>
-			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {opacity: '1'}} ref={navigationRef}>
-					<div className="title-container">
-						<h1>{title}</h1>
-					</div>
+			<div className="navigation-title-and-icon-container" style={scrollState ? hiddenScrolledState : {opacity: '1'}}>
+				<div className="icon-container">
+					<Link to="/home">
+						<img src="../../img/Logo.png" alt="logo" onMouseEnter={addStyle} onMouseLeave={removeStyle}/>
+					</Link>
+				</div>
+				
+				<div className="title-container" ref={titleRef}>
+					<h1>{title}</h1>
+				</div>
 
 				<div className="navigation-container" >
 					<ul className="links">
@@ -74,9 +81,11 @@ function Navigation({title, first_link, second_link}) {
 							</Link>
 					</ul>
 				</div>
+				{/** 
 				<div className="icon-container">
 					<img src="../../img/Logo.png" alt="logo"/>
 				</div>
+				*/}
 			</div>
 		</div>
 	)

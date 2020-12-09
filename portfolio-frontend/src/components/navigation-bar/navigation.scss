@@ -3,19 +3,34 @@
 .navigation-title-and-icon-container{
 	position: fixed;
 	width: 100%;
-	opacity: 0;
 	top: 0;
 	left: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 2em 3em 0 3em;
+	margin: 2em 3em 0 0;
 	transition: .4s all ease;
-	.title-container{
+	.icon-container{
 		flex: 1;
+		img{
+			cursor: pointer;
+			margin-left: 3em;
+			width: 60px;
+			height: 60px;
+			transition: .4s ease all;
+			&:hover{
+				transform: scale(1.2);
+			}
+		}
+	}
+	.title-container{
+		opacity: 0;
+		flex: 1;
+		text-align: center;
 		color: white;
 		text-transform: uppercase;
 		font-size: 0.9em;
+		transition: .3s ease all;
 		h1{
 			display: inline-block;
 			font-weight: 100;
@@ -27,12 +42,12 @@
 		display: flex;
 		justify-content: flex-end;
 		color: white;
-		margin-right: 7em;
 		z-index: 2;
 		.links{
 			font-weight: 300;
 			list-style: none;
 			padding: 0;
+			margin-right: 2em;
 			.link{
 				text-decoration: none;
 			}
@@ -51,24 +66,14 @@
 			}
 		}
 	}
-	.icon-container{
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		left: 0;
-		right: 0;
-		margin: auto auto;
-		z-index: 0;
-		img{
-			z-index: 2;
-			width: 50px;
-			height: 50px;
-		}
-	}
 }
 
 @media(max-width: $biggerIpad){
 	.navigation-title-and-icon-container{
+		.title-container{
+			margin-left: 3em;
+			text-align: start;
+		}
 		.icon-container, .navigation-container{
 			display: none;
 		}
