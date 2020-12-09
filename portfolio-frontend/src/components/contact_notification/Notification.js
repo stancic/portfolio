@@ -13,7 +13,7 @@ function Notification({message}) {
 	const handleClick = () => {
 		dispatch(hideNotification())
 	}
-
+	
 	useEffect(() => {
 		setDidMount(true)
 		setTimeout(function(){
