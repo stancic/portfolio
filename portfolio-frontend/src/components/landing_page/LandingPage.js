@@ -8,7 +8,7 @@ import { linksENLanding } from '../data_objects/links'
 //COMPONENTS IMPORT
 import Navigation from '../navigation-bar/Navigation'
 import { Link } from 'react-router-dom'
-import {ReactComponent as Logo} from '../../img/Coding-bro.svg'
+import {ReactComponent as Logo} from '../../img/code.svg'
 //IMPORT STYLES
 import './landingpage.scss'
 import './landingPageMobile.scss'
@@ -59,7 +59,7 @@ function LandingPage({title, description, contact, download}){
 		setDidMount(true)
 		setTimeout(()=>{
 			containerRef.current.style.opacity = 1
-		}, 100)
+		}, 600)
 		return() => {
 			setDidMount(false)
 		}

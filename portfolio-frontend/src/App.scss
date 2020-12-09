@@ -1,10 +1,8 @@
 body, html{
 	margin: 0;
 	padding: 0;
-	background: #000000;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background-color: #2d3436;
+	background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	animation: gradientBG 10s ease infinite;

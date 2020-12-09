@@ -105,6 +105,7 @@
 		color: $tirkizna;
 		padding: 0.8em 3.3em;
 		transition: background-size .5s, color .5s;
+		cursor: pointer;
 		&:hover{
 			background-size: 100% 100%;
 			color: white;

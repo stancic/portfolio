@@ -10,10 +10,8 @@
 	align-items: center;
 	justify-content: center;
 	top: 0;
-	background: #3d3393;  /* fallback for old browsers */
-	background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background-size: 400% 400%;
+	background-color: #2d3436;
+	background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	animation: gradientBG 10s ease infinite;
 	transition: 1s all ease-out;
