@@ -35,6 +35,13 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			.mobile-nav-logo{
+				position: fixed;
+				width: 60px;
+				top: 3.5%;
+				left: 3%;
+				transition: .5s all ease;
+			}
 			.mobile-nav-links-container{
 				.mobile-links{
 					list-style: none;

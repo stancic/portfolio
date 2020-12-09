@@ -1,7 +1,5 @@
 //IMPOPRT DEPENDENCIES
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { unload } from '../../reducers/loadingPageReducer';
 
 //IMPORT STYLES
 import './loading.scss'

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { IoIosMenu, IoIosClose } from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import { ReactComponent as Icon} from '../../../img/Logo.png'
 //IMPORT DATA OBJECTS
 
 
@@ -29,6 +30,9 @@ function MobileNavigation({first_link, second_link, third_link}) {
 			</div>
 			<div className="mobile-nav-container" style={iconState ? {background: "black", marginLeft: "0px"} : {marginLeft: "3000px"}}>
 				<div className="mobile-nav-data-container" >
+					<Link to="/" onClick={() => setIconState(false)}>
+						<img  style={iconState ? {background: "black", marginLeft: "0px"} : {marginLeft: "3000px"}} className="mobile-nav-logo" src="../../../img/Logo.png" alt="" />
+					</Link>
 					<div className="mobile-nav-links-container">
 						<ul className="mobile-links">
 							<Link to={first_link.link} className="first-mobile-link-item link" onClick={() => setIconState(false)}>
