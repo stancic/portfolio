@@ -7,58 +7,25 @@ import { unload } from '../../reducers/loadingPageReducer';
 import './loading.scss'
 
 function Loading() {
-	const loadState = useSelector(state => state.loading)
-	const dispatch = useDispatch()
+	const [loadFlag, setLoadFlag] = useState(false)
+	const [letterFlag, setLetterFlag] = useState(false)
 
-	const DIAMETER = 50;
-	const STROKE_WIDTH = 0.5;
-	const RADIUS = DIAMETER / 2 -STROKE_WIDTH / 2
-	const CIRCUMFENCE = Math.PI * RADIUS * 2
-	let [offset, setOffset] = useState(0)
-	let timeout
-	
 	useEffect(()=>{
-		if(loadState){
-			for(let i = 0; i > -312; i--){
-				setOffset(i)
-			}
+		setTimeout(()=>{
+			setLetterFlag(true)
+		}, 1500)
+		setTimeout(()=>{
+			setLoadFlag(true)
+		}, 3000)
+		return() => {
+			setLetterFlag(false)
+			setLoadFlag(false)
 		}
-	}, [loadState])
-	if(loadState){
-		timeout = setTimeout(()=>{
-			dispatch(unload())
-			if(offset === -311){
-				setOffset(0)
-			}
-		},2700)
-	}
-	else{
-		clearTimeout(timeout)
-	}
-	console.log("For some freaking reason it doesn't work without this", "\nload state:", loadState, "offset:", offset)
+	},[])
 
 	return (
-		<div className="loader-container" style={loadState ? {display: "flex"} : {display: "none"}}>
-			<svg 
-				viewBox="0 0 50 50"
-				width="400px"
-				height="400px"
-				className="circular-progress"
-			>
-				
-				<circle
-					className="svg-circle" 
-					cx={DIAMETER / 2}
-					cy={DIAMETER / 2}
-					r={RADIUS}
-					stroke="#00bfa6e7" 
-					fill="transparent" 
-					strokeWidth={STROKE_WIDTH}
-					strokeDasharray={CIRCUMFENCE}
-					strokeDashoffset={offset}
-				/>
-			</svg>
-			<img className="loading-logo" src="../../img/Logo.png" alt=""/>
+		<div className="loader-container" style={loadFlag ? {opacity: "0", zIndex: '-40'} : {opacity: "1"}}>
+			<h1 className="loading-title" style={letterFlag ? {letterSpacing:'14px', opacity: '0'} : {}}>Dino Stancic</h1>
 		</div>
 	)
 }

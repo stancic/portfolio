@@ -14,11 +14,11 @@ import LandingPage from './components/landing_page/LandingPage'
 import CustomCursor from './components/custom_cursor/CustomCursor'
 import Projects from './components/projects_page/Projects'
 import MobileNavigation from './components/navigation-bar/mobile-navigation/MobileNavigation'
+import Contact from './components/contact_page/Contact'
 
 //DATA OBJECTS IMPORTING
 import { dataEN } from './components/data_objects/landingPageData'
 import { linksENMobile } from './components/data_objects/links'
-import Contact from './components/contact_page/Contact'
 
 function App() {
 	const dispatch = useDispatch()
@@ -32,6 +32,7 @@ function App() {
 				<CustomCursor />
 				<Socials />
 				<MobileNavigation {...linksENMobile}/>
+						<Loading />
 				<Switch>
 					<Route path="/my_projects">		
 						<Projects />
@@ -40,7 +41,6 @@ function App() {
 						<Contact />
 					</Route>
 					<Route path="/">
-						<Loading />
 						<LandingPage {...dataEN}/>
 					</Route>
 				</Switch>
