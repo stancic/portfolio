@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { send } from '../../reducers/mailReducer'
+import { showNotification } from '../../reducers/notificationStatusReducer'
+import Notification from '../contact_notification/Notification'
 
 //IMPORT STYLES
 import './contactForm.scss'
@@ -22,6 +24,8 @@ function ContactForm() {
 	const [message, setMessage] = useState('')
 	const [messageEmptyFlag, setMessageEmptyFlag] = useState(false)
 
+	const [notification, setNotification] = useState('')
+
 
 	const addStyle = () => {
 		const cursor = document.querySelector('.custom-cursor')
@@ -38,21 +42,24 @@ function ContactForm() {
 	const sendMail = (event) => {
 		event.preventDefault()
 		if(name.length === 0 || mail.length === 0 || subject.length === 0 || message.length === 0){
-			alert('NO FIELDS LEFT BEHIND!')
+			setNotification('Status 412:\nmessage: precondition failed\nSolution: please fill in all the fields...')
+			dispatch(showNotification())
 		} 
 		
 		else if(mail.indexOf("@") === -1 || mail.indexOf(".") === -1){
-			alert('MAIL MUST CONTAIN @ AND .')
+			setNotification('Status 412:\nmessage: precondition failed\nSolution: mail must contain "@" and "." (dot) ...')
+			dispatch(showNotification())
 		}
 		else {
-
 			let mailObject = {
 				name: name,
 				mail: mail,
 				subject: subject,
 				message: message
 			}
+			setNotification(`Thanks ${name} for contacting me.\nI will answer as soon as possible\nIn the meantime, you can check out my projects!`)
 			dispatch(send(mailObject))
+			dispatch(showNotification())
 			setName('')
 			setMail('')
 			setSubject('')
@@ -60,8 +67,10 @@ function ContactForm() {
 		}
 	}
 
+
 	return (
 		<div>
+			<Notification message={notification}/>
 			<form onSubmit={sendMail}>
 				<div className="name-and-mail-container">
 					<div className="name-container">

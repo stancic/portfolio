@@ -1,0 +1,53 @@
+@import '../../rwd_variables.scss';
+
+.notification-container{
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #000000c0;
+	padding: 0;
+	width: 30em;
+	height: 10em;
+	border-radius: 25px;
+	font-family: $roboto;
+	opacity: 0;
+	top: 15%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 20px 5px $tirkizna;
+	transition: .5s all ease;
+	.notification-message-container{
+		.notification-message{
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: $tirkizna;
+			text-decoration-thickness: 2px;
+			font-size: 1.2em;
+			font-weight: 300;
+		}
+	}
+	.close-notification-container{
+		position: absolute;
+		color: white;
+		font-size: 1.6em;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+}
+
+@media(max-width: 500px){
+	.notification-container{
+		width: 25em;
+	}
+}
+
+@media(max-width: 410px){
+	.notification-container{
+		width: 19em;
+		height: 8em;
+	}
+}
