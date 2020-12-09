@@ -68,7 +68,7 @@ function Contact() {
 				<div className="right-form-and-message-container">
 					<div className="right-message-container">
 						<p className="message">
-							If you want me to work on any of your ideas or pojects,
+							If you want me to work on any of your ideas or projects,
 							or you just want to talk, send me a message.
 						</p>
 					</div>

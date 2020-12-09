@@ -27,6 +27,7 @@
 			text-decoration-thickness: 2px;
 			font-size: 1.2em;
 			font-weight: 300;
+			padding: 40px;
 		}
 	}
 	.close-notification-container{
@@ -41,13 +42,18 @@
 
 @media(max-width: 500px){
 	.notification-container{
-		width: 25em;
+		width: 30em;
+		.notification-message-container{
+			.notification-message{
+				font-size: 1em;
+			}
+		}
 	}
 }
 
 @media(max-width: 410px){
 	.notification-container{
-		width: 19em;
+		width: 22em;
 		height: 8em;
 	}
 }

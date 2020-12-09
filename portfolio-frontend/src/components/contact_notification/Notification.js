@@ -28,7 +28,7 @@ function Notification({message}) {
 		return null
 	}
 
-	const notificationText = message.split('\n').map(notification => <p>{notification}</p>)
+	const notificationText = message.split('\n').map(notification => <p key={notification}>{notification}</p>)
 
 	return (
 		<div className="notification-container" style={notificationState ? {opacity: 1} : {opacity: 0}}>
