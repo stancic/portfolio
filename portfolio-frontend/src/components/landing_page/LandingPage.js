@@ -97,7 +97,7 @@ function LandingPage({title, description, contact, download}){
 						<Link to="/contact_me">
 							<button className="contact-button">{contact}</button>
 						</Link>
-						<a href="https://drive.google.com/file/d/1PJA7rZpjLaAgJiENVXglDka1vQpi2RQq/view?usp=sharing" target="_blank" rel="noreferrer">
+						<a href="https://drive.google.com/file/d/1IHfaSR8ZH4xj_MRI-W3iGXyBZklJgIAA/view" target="_blank" rel="noreferrer">
 							<button className="download-button">Download CV!</button>
 						</a>
 					</div>
