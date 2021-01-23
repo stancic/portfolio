@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
 import { logout } from '../reducers/loginReducer'
 import { initializeProjects } from '../reducers/projectsReducer'
 import Projects from './Projects'
@@ -9,11 +8,9 @@ import ProjectsForm from './ProjectsForm'
 
 function ProjectsContainer() {
 	const dispatch = useDispatch()
-	const history = useHistory()
 
 	const handleLogout = () => {
 		dispatch(logout())
-		history.push('/')
 	}
 
 	useEffect(()=>{

@@ -3,11 +3,9 @@ import './LoginForm.scss'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../reducers/loginReducer'
-import { useHistory } from 'react-router-dom'
 
 function LoginForm() {
 	const dispatch = useDispatch()
-	let history = useHistory() 
 
 	let userStatus = useSelector(state => state.user)
 
@@ -21,8 +19,6 @@ function LoginForm() {
 		if(userStatus === 401){
 			setUsername('')
 			setPassword('')
-		} else {
-			history.push('/minicms')
 		}
 	}
 
