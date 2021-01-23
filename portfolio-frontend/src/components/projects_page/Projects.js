@@ -17,7 +17,7 @@ function Projects() {
 
 
 	const [pictureURL, setPictureURL] = useState("https://i.imgur.com/DclRzsb.png")
-	const [description, setDescription] = useState("My idea of this project was to create a movie picker when you're bored, you can track those movies but you'll need to create account for that purpose. I used The Movie Database API for this project.")
+	const [description, setDescription] = useState("Sadly this project isn't over, login isn't functioning and not all things are mobile friendly. But... My idea of this project was to create a movie picker when you're bored, you can track those movies but you'll need to create account for that purpose. I used The Movie Database API for this project.")
 	const [gitURL, setGitURL] = useState("https://github.com/stancic/boredMoviePicker")
 	const [livePreviewURL, setLivePreview] = useState("https://stancic.github.io/boredMoviePicker/")
 
